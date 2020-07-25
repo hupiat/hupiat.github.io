@@ -50,7 +50,6 @@ a {
 }
 
 .project-card {
-  min-height: 300px;
   text-align: center;
   margin: 50px 100px;
   background-color: #f8f8f8;
@@ -128,7 +127,7 @@ a {
 
 /* MEDIA QUERIES */
 
-@media (min-width: 50em) {
+@media (min-width: 40em) {
   #layout {
     padding-left: 300px;
     display: flex;
@@ -154,10 +153,6 @@ a {
     overflow: auto;
     height: 100%;
     width: 100%;
-  }
-  .project-card {
-    min-width: 350px;
-    min-height: 200px;
   }
 }
 
