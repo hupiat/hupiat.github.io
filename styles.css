@@ -138,7 +138,7 @@ a {
 
 /* MEDIA QUERIES */
 
-@media (min-width: 60em) {
+@media (min-width: 1280px) {
   #layout {
     padding-left: 300px;
     display: flex;
