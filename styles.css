@@ -18,6 +18,7 @@ a {
   text-align: center;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
   margin-bottom: 130px;
+  padding-top: 15px;
 }
 #nav.active {
   height: 80%;
@@ -29,6 +30,7 @@ a {
 #nav .nav-title {
   color: #fff;
   padding: 10px;
+  font-size: 1.3em;
 }
 #nav .nav-icon {
   width: 30px;
@@ -47,12 +49,6 @@ a {
   width: 200px;
   height: 200px;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-#nav #avatar:hover {
-  opacity: 0.8;
 }
 #nav .line {
   position: absolute;
