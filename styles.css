@@ -22,7 +22,7 @@ a {
 #nav.active {
   height: 80%;
 }
-#nav.active .nav-inner {
+#nav.active #nav-inner {
   display: block;
   padding: 2em 0px;
 }
@@ -178,7 +178,7 @@ a {
     width: 300px;
     height: 100%;
   }
-  .nav-inner {
+  #nav-inner {
     display: block;
     padding: 2em 0;
   }
