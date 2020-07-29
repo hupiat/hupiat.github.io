@@ -90,22 +90,25 @@ a {
   position: relative;
   top: 100px;
 }
+#hover-workaround-safari {
+  visibility: hidden;
+  margin-top: -100px;
+}
 .project-card {
   position: relative;
-  top: 100px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 15px;
   background-color: #2e3131;
   padding: 30px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   cursor: pointer;
 }
 .project-card:hover {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  transform: scale(1.05);
   box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 .project-tags {
