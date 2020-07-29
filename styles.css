@@ -87,6 +87,7 @@ a {
 
 #main-title {
   margin: 50px;
+  margin-bottom: 150px;
   position: relative;
   top: 100px;
 }
@@ -197,6 +198,7 @@ a {
   }
   #main-title {
     top: 20px;
+    margin-bottom: 50px;
   }
   #nav #photo {
     margin-top: 50px;
