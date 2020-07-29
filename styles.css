@@ -2,10 +2,11 @@
 
 body {
   color: #333;
+  background-color: #e8ecf1;
 }
 a {
   text-decoration: none;
-  color: black;
+  color: #ececec;
 }
 
 /* NAVBAR */
@@ -14,7 +15,7 @@ a {
   width: 100%;
   height: 350px;
   position: relative;
-  background: #16a085;
+  background-color: #003333;
   text-align: center;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
   margin-bottom: 130px;
@@ -28,9 +29,13 @@ a {
   padding: 2em 0px;
 }
 #nav .nav-title {
-  color: #fff;
-  padding: 10px;
+  color: #bdc3c7;
+  padding: 20px;
   font-size: 1.3em;
+  margin: 0px;
+}
+#nav #nav-icons-container {
+  margin-bottom: 30px;
 }
 #nav .nav-icon {
   width: 30px;
@@ -57,7 +62,7 @@ a {
   bottom: 50px;
   width: 300px;
   height: 2px;
-  background-color: #fff;
+  background-color: black;
   z-index: -1;
 }
 #nav #education {
@@ -75,6 +80,7 @@ a {
 #nav #education-text {
   margin: 5px;
   line-height: 20px;
+  color: #2e3131;
 }
 
 /* CARDS */
@@ -88,8 +94,8 @@ a {
   position: relative;
   top: 100px;
   text-align: center;
-  margin: 50px 10vw;
-  background-color: #f8f8f8;
+  margin-top: 20px;
+  background-color: #2e3131;
   padding: 30px;
   clip-path: padding-box;
   -webkit-transition: all 0.3s ease-in-out;
@@ -112,7 +118,7 @@ a {
   border-radius: 10px;
   padding: 5px;
   margin: 10px 5px;
-  color: #fff;
+  color: #ececec;
 }
 .tag.red {
   background-color: #c0392b;
@@ -124,10 +130,10 @@ a {
   background-color: #9b59b6;
 }
 .tag.yellow {
-  background-color: #f1c40f;
+  background-color: #e2b13c;
 }
 .tag.green {
-  background-color: #16a085;
+  background-color: #019875;
 }
 .tag.green-light {
   background-color: #2ecc71;
@@ -165,11 +171,18 @@ a {
     display: block;
     padding: 2em 0;
   }
-  #nav .nav-menu-button {
-    display: none;
+  #nav #nav-icons-container {
+    margin-bottom: 0px;
   }
   #nav #education {
     top: 100px;
+  }
+  #nav #education-icon {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(213deg)
+      brightness(80%) contrast(80%);
+  }
+  #nav #education-text {
+    color: #bdc3c7;
   }
   #main {
     position: relative;
@@ -190,10 +203,15 @@ a {
   }
   .project-card {
     top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
 @media (min-width: 1280px) and (max-height: 800px) {
   #nav .line {
     display: none;
+  }
+  #nav #education {
+    top: 50px;
   }
 }
