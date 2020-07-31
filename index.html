@@ -100,7 +100,7 @@
         <h1 id="main-title">
           Here, there are my personal projects you can browse in 😘
         </h1>
-        <div>
+        <div id="project-cards-container">
           <section class="project-card">
             <a
               href="https://github.com/hupiat/hupiat.github.io"
@@ -108,12 +108,13 @@
               rel="noopener noreferrer"
             >
               <h3>This</h3>
-              <p>My portfolio, in pure CSS / HTML.</p>
+              <p>My portfolio, in pure CSS / HTML / JS.</p>
               <div class="project-tags">
                 <span class="tag red-light">HTML</span>
-                <span class="tag purple">CSS</span>
-                <span class="tag purple">Pure.css</span>
-                <span class="tag yellow">Showcase</span>
+                <span class="tag purple-light">CSS</span>
+                <span class="tag purple-light">Pure.css</span>
+                <span class="tag yellow">JS</span>
+                <span class="tag purple">Showcase</span>
               </div>
             </a>
           </section>
@@ -189,7 +190,7 @@
               <div class="project-tags">
                 <span class="tag midnight">React</span>
                 <span class="tag midnight">TypeScript</span>
-                <span class="tag purple">Material-UI</span>
+                <span class="tag purple-light">Material-UI</span>
                 <span class="tag green-light">C#</span>
                 <span class="tag grey">SQL Server</span>
                 <span class="tag red">Work in progress</span>
@@ -225,5 +226,15 @@
         </div>
       </div>
     </div>
+
+    <img
+      src="./assets/up-arrow.svg"
+      id="up-arrow"
+      alt="go to top"
+      type="image/svg+xml"
+    />
   </body>
+
+  <script type="text/javascript" src="./js/velocity.js"></script>
+  <script type="text/javascript" src="./js/scroll.js"></script>
 </html>

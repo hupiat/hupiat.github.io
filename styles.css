@@ -8,6 +8,22 @@ a {
   text-decoration: none;
   color: #ececec;
 }
+#up-arrow {
+  opacity: 0;
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  background-color: #e8ecf1;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+#up-arrow:hover {
+  background-color: #bdc3c7;
+}
 
 /* NAVBAR */
 
@@ -94,6 +110,11 @@ a {
 #hover-workaround-safari {
   visibility: hidden;
   margin-top: -100px;
+  margin-bottom: 50px;
+}
+#project-cards-container {
+  overflow: -moz-hidden-unscrollable;
+  overflow: hidden;
 }
 .project-card {
   position: relative;
@@ -130,8 +151,11 @@ a {
 .tag.red-light {
   background-color: #e74c3c;
 }
-.tag.purple {
+.tag.purple-light {
   background-color: #9b59b6;
+}
+.tag.purple {
+  background-color: #674172;
 }
 .tag.yellow {
   background-color: #e2b13c;
@@ -158,6 +182,9 @@ a {
 /* MEDIA QUERIES */
 
 @media (min-width: 1280px) {
+  #hover-workaround-safari {
+    margin-bottom: 75px;
+  }
   #layout {
     padding-left: 300px;
     display: flex;
@@ -188,14 +215,6 @@ a {
   #nav #education-text {
     color: #bdc3c7;
   }
-  #main {
-    position: relative;
-    overflow: auto;
-    height: 100%;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-  }
   #main-title {
     top: 20px;
     margin-bottom: 50px;
@@ -205,6 +224,13 @@ a {
   }
   #nav .line {
     display: inline-block;
+  }
+  #main {
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
   }
   .project-card {
     top: 20px;
