@@ -51,10 +51,10 @@ window.addEventListener("resize", () => {
   if (resize_timeout) {
     clearTimeout(resize_timeout);
   }
-  setTimeout(
-    () => (TRIGGER_ANCHOR_PX = document.body.offsetWidth < 1280 ? 800 : 100),
-    DEBOUNCE_DELAY_MS
-  );
+  setTimeout(() => {
+    TRIGGER_ANCHOR_PX = document.body.offsetWidth < 1280 ? 800 : 100;
+    scroll_callback();
+  }, DEBOUNCE_DELAY_MS);
 });
 
 arrow.addEventListener("click", () => {
