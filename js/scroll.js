@@ -1,4 +1,4 @@
-const ANIM_DURATION_MS = 50;
+const ANIM_DURATION_MS = 100;
 const DEBOUNCE_DELAY_MS = 350;
 const MAX_WIDTH_MOBILE_PX = 1280;
 
@@ -9,6 +9,7 @@ const getBodyScrollTop = () => {
 
 let scroll_timeout;
 let will_change_visiblity = false;
+let is_visible = false;
 let TRIGGER_ANCHOR_PX =
   document.body.offsetWidth < MAX_WIDTH_MOBILE_PX ? 800 : 100;
 
@@ -22,10 +23,11 @@ const scroll_callback = () => {
     clearTimeout(scroll_timeout);
   }
   const scroll_top = getBodyScrollTop();
-  const opacity = Number(arrow.style.opacity);
+  const right = Number(arrow.style.right);
+  console.log(arrow.style.right);
   if (
-    (scroll_top > TRIGGER_ANCHOR_PX && opacity === 0) ||
-    (scroll_top < TRIGGER_ANCHOR_PX && opacity === 1)
+    (scroll_top > TRIGGER_ANCHOR_PX && !is_visible) ||
+    (scroll_top < TRIGGER_ANCHOR_PX && is_visible)
   ) {
     will_change_visiblity = true;
   }
@@ -34,12 +36,13 @@ const scroll_callback = () => {
       Velocity(
         arrow,
         {
-          opacity: scroll_top > TRIGGER_ANCHOR_PX ? 1 : 0,
+          right: scroll_top > TRIGGER_ANCHOR_PX ? 50 : -150,
         },
         {
           duration: ANIM_DURATION_MS,
         }
       );
+      is_visible = scroll_top > TRIGGER_ANCHOR_PX;
       will_change_visiblity = false;
     }, DEBOUNCE_DELAY_MS);
   }
