@@ -29,8 +29,6 @@ const scroll_callback = () => {
     clearTimeout(scroll_timeout);
   }
   const scroll_top = getBodyScrollTop();
-  const right = Number(arrow.style.right);
-  console.log(arrow.style.right);
   if (
     (scroll_top > TRIGGER_ANCHOR_PX && !is_visible) ||
     (scroll_top < TRIGGER_ANCHOR_PX && is_visible)
