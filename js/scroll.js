@@ -1,6 +1,10 @@
 const ANIM_DURATION_MS = 100;
 const DEBOUNCE_DELAY_MS = 350;
 const MAX_WIDTH_MOBILE_PX = 1280;
+const TRIGGER_SCROLL_MOBILE_PX = 800;
+const TRIGGER_SCROLL_DESKTOP_PX = 100;
+const UP_ARROW_VISIBLE_RIGHT_PX = 50;
+const UP_ARROW_HIDDEN_RIGHT_PX = -150;
 
 const getBodyScrollTop = () => {
   const el = document.scrollingElement || document.documentElement;
@@ -11,7 +15,9 @@ let scroll_timeout;
 let will_change_visiblity = false;
 let is_visible = false;
 let TRIGGER_ANCHOR_PX =
-  document.body.offsetWidth < MAX_WIDTH_MOBILE_PX ? 800 : 100;
+  document.body.offsetWidth < MAX_WIDTH_MOBILE_PX
+    ? TRIGGER_SCROLL_MOBILE_PX
+    : TRIGGER_SCROLL_DESKTOP_PX;
 
 const arrow = document.getElementById("up-arrow");
 
@@ -36,7 +42,10 @@ const scroll_callback = () => {
       Velocity(
         arrow,
         {
-          right: scroll_top > TRIGGER_ANCHOR_PX ? 50 : -150,
+          right:
+            scroll_top > TRIGGER_ANCHOR_PX
+              ? UP_ARROW_VISIBLE_RIGHT_PX
+              : UP_ARROW_HIDDEN_RIGHT_PX,
         },
         {
           duration: ANIM_DURATION_MS,
@@ -58,7 +67,9 @@ window.addEventListener("resize", () => {
   }
   setTimeout(() => {
     TRIGGER_ANCHOR_PX =
-      document.body.offsetWidth < MAX_WIDTH_MOBILE_PX ? 800 : 100;
+      document.body.offsetWidth < MAX_WIDTH_MOBILE_PX
+        ? TRIGGER_SCROLL_MOBILE_PX
+        : TRIGGER_SCROLL_DESKTOP_PX;
     scroll_callback();
   }, DEBOUNCE_DELAY_MS);
 });
