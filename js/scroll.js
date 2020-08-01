@@ -1,10 +1,10 @@
-const ANIM_DURATION_MS = 200;
+const ANIM_DURATION_MS = 300;
 const DEBOUNCE_DELAY_MS = 300;
 const MAX_WIDTH_MOBILE_PX = 1280;
 const TRIGGER_SCROLL_MOBILE_PX = 800;
 const TRIGGER_SCROLL_DESKTOP_PX = 100;
 const UP_ARROW_VISIBLE_RIGHT_PX = 50;
-const UP_ARROW_HIDDEN_RIGHT_PX = -50;
+const UP_ARROW_HIDDEN_RIGHT_PX = -100;
 
 const getScrollValue = () => {
   const el = document.scrollingElement || document.documentElement;
@@ -43,6 +43,7 @@ const scrollCallback = () => {
         },
         {
           duration: ANIM_DURATION_MS,
+          easing: "ease-out",
         }
       );
       isVisible = scrollTop > triggerAnchorPos;
