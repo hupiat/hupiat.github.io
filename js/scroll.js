@@ -73,7 +73,14 @@ window.addEventListener("resize", () => {
 });
 
 arrow.addEventListener("click", () => {
-  Velocity(document.body, {
-    scrollTop: 0,
-  });
+  Velocity(
+    document.body,
+    {
+      scrollTop: 0,
+    },
+    {
+      easing: [500, 50],
+      duration: 500,
+    }
+  );
 });
