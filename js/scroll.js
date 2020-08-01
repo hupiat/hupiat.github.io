@@ -6,15 +6,15 @@ const TRIGGER_SCROLL_DESKTOP_PX = 100;
 const UP_ARROW_VISIBLE_RIGHT_PX = 50;
 const UP_ARROW_HIDDEN_RIGHT_PX = -150;
 
-const get_scroll = () => {
+const getScrollValue = () => {
   const el = document.scrollingElement || document.documentElement;
   return el.scrollTop;
 };
 
-let scroll_timeout;
-let will_change_visiblity = false;
-let is_visible = false;
-let TRIGGER_ANCHOR_PX =
+let scrollTimeout;
+let willChangeVisibility = false;
+let isVisible = false;
+let triggerAnchorPos =
   document.body.offsetWidth < MAX_WIDTH_MOBILE_PX
     ? TRIGGER_SCROLL_MOBILE_PX
     : TRIGGER_SCROLL_DESKTOP_PX;
@@ -22,26 +22,26 @@ let TRIGGER_ANCHOR_PX =
 const arrow = document.getElementById("up-arrow");
 
 const scroll_callback = () => {
-  if (will_change_visiblity) {
+  if (willChangeVisibility) {
     return;
   }
-  if (scroll_timeout) {
-    clearTimeout(scroll_timeout);
+  if (scrollTimeout) {
+    clearTimeout(scrollTimeout);
   }
-  const scroll_top = get_scroll();
+  const scroll_top = getScrollValue();
   if (
-    (scroll_top > TRIGGER_ANCHOR_PX && !is_visible) ||
-    (scroll_top < TRIGGER_ANCHOR_PX && is_visible)
+    (scroll_top > triggerAnchorPos && !isVisible) ||
+    (scroll_top < triggerAnchorPos && isVisible)
   ) {
-    will_change_visiblity = true;
+    willChangeVisibility = true;
   }
-  if (will_change_visiblity) {
-    scroll_timeout = setTimeout(() => {
+  if (willChangeVisibility) {
+    scrollTimeout = setTimeout(() => {
       Velocity(
         arrow,
         {
           right:
-            scroll_top > TRIGGER_ANCHOR_PX
+            scroll_top > triggerAnchorPos
               ? UP_ARROW_VISIBLE_RIGHT_PX
               : UP_ARROW_HIDDEN_RIGHT_PX,
         },
@@ -49,8 +49,8 @@ const scroll_callback = () => {
           duration: ANIM_DURATION_MS,
         }
       );
-      is_visible = scroll_top > TRIGGER_ANCHOR_PX;
-      will_change_visiblity = false;
+      isVisible = scroll_top > triggerAnchorPos;
+      willChangeVisibility = false;
     }, DEBOUNCE_DELAY_MS);
   }
 };
@@ -58,13 +58,13 @@ const scroll_callback = () => {
 document.getElementById("main").addEventListener("scroll", scroll_callback);
 document.addEventListener("scroll", scroll_callback);
 
-let resize_timeout;
+let resizeTimeout;
 window.addEventListener("resize", () => {
-  if (resize_timeout) {
-    clearTimeout(resize_timeout);
+  if (resizeTimeout) {
+    clearTimeout(resizeTimeout);
   }
   setTimeout(() => {
-    TRIGGER_ANCHOR_PX =
+    triggerAnchorPos =
       document.body.offsetWidth < MAX_WIDTH_MOBILE_PX
         ? TRIGGER_SCROLL_MOBILE_PX
         : TRIGGER_SCROLL_DESKTOP_PX;
