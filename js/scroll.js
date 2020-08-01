@@ -6,7 +6,7 @@ const TRIGGER_SCROLL_DESKTOP_PX = 100;
 const UP_ARROW_VISIBLE_RIGHT_PX = 50;
 const UP_ARROW_HIDDEN_RIGHT_PX = -150;
 
-const getBodyScrollTop = () => {
+const get_scroll = () => {
   const el = document.scrollingElement || document.documentElement;
   return el.scrollTop;
 };
@@ -28,7 +28,7 @@ const scroll_callback = () => {
   if (scroll_timeout) {
     clearTimeout(scroll_timeout);
   }
-  const scroll_top = getBodyScrollTop();
+  const scroll_top = get_scroll();
   if (
     (scroll_top > TRIGGER_ANCHOR_PX && !is_visible) ||
     (scroll_top < TRIGGER_ANCHOR_PX && is_visible)
