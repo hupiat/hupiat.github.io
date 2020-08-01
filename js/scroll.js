@@ -1,5 +1,6 @@
 const ANIM_DURATION_MS = 50;
 const DEBOUNCE_DELAY_MS = 350;
+const MAX_WIDTH_MOBILE_PX = 1280;
 
 const getBodyScrollTop = () => {
   const el = document.scrollingElement || document.documentElement;
@@ -8,7 +9,8 @@ const getBodyScrollTop = () => {
 
 let scroll_timeout;
 let will_change_visiblity = false;
-let TRIGGER_ANCHOR_PX = document.body.offsetWidth < 1280 ? 800 : 100;
+let TRIGGER_ANCHOR_PX =
+  document.body.offsetWidth < MAX_WIDTH_MOBILE_PX ? 800 : 100;
 
 const arrow = document.getElementById("up-arrow");
 
@@ -52,7 +54,8 @@ window.addEventListener("resize", () => {
     clearTimeout(resize_timeout);
   }
   setTimeout(() => {
-    TRIGGER_ANCHOR_PX = document.body.offsetWidth < 1280 ? 800 : 100;
+    TRIGGER_ANCHOR_PX =
+      document.body.offsetWidth < MAX_WIDTH_MOBILE_PX ? 800 : 100;
     scroll_callback();
   }, DEBOUNCE_DELAY_MS);
 });
