@@ -28,6 +28,7 @@ const scrollCallback = () => {
   const shouldBeHidden = scrollTop < triggerAnchorPos && isVisible;
   if ((shouldBeVisible && willBeHidden) || (shouldBeHidden && willBeVisible)) {
     clearTimeout(scrollTimeout);
+    scrollTimeout = null;
   }
   willBeVisible = shouldBeVisible;
   willBeHidden = shouldBeHidden;
