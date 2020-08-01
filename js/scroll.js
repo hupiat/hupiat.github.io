@@ -43,7 +43,7 @@ const scrollCallback = () => {
         },
         {
           duration: ANIM_DURATION_MS,
-          easing: "ease-out",
+          easing: "ease-in-out",
         }
       );
       isVisible = scrollTop > triggerAnchorPos;
