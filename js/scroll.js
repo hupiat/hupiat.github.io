@@ -63,7 +63,7 @@ window.addEventListener("resize", () => {
   if (resizeTimeout) {
     clearTimeout(resizeTimeout);
   }
-  setTimeout(() => {
+  resizeTimeout = setTimeout(() => {
     triggerAnchorPos =
       document.body.offsetWidth < MAX_WIDTH_MOBILE_PX
         ? TRIGGER_SCROLL_MOBILE_PX
