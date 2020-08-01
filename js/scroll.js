@@ -1,5 +1,5 @@
 const ANIM_DURATION_MS = 100;
-const DEBOUNCE_DELAY_MS = 350;
+const DEBOUNCE_DELAY_MS = 500;
 const MAX_WIDTH_MOBILE_PX = 1280;
 const TRIGGER_SCROLL_MOBILE_PX = 800;
 const TRIGGER_SCROLL_DESKTOP_PX = 100;
@@ -12,7 +12,8 @@ const getScrollValue = () => {
 };
 
 let scrollTimeout;
-let willChangeVisibility = false;
+let willBeVisible = false;
+let willBeHidden = false;
 let isVisible = false;
 let triggerAnchorPos =
   document.body.offsetWidth < MAX_WIDTH_MOBILE_PX
@@ -22,20 +23,15 @@ let triggerAnchorPos =
 const arrow = document.getElementById("up-arrow");
 
 const scrollCallback = () => {
-  if (willChangeVisibility) {
-    return;
-  }
-  if (scrollTimeout) {
+  const scrollTop = getScrollValue();
+  const shouldBeVisible = scrollTop > triggerAnchorPos && !isVisible;
+  const shouldBeHidden = scrollTop < triggerAnchorPos && isVisible;
+  if ((shouldBeVisible && willBeHidden) || (shouldBeHidden && willBeVisible)) {
     clearTimeout(scrollTimeout);
   }
-  const scrollTop = getScrollValue();
-  if (
-    (scrollTop > triggerAnchorPos && !isVisible) ||
-    (scrollTop < triggerAnchorPos && isVisible)
-  ) {
-    willChangeVisibility = true;
-  }
-  if (willChangeVisibility) {
+  willBeVisible = shouldBeVisible;
+  willBeHidden = shouldBeHidden;
+  if ((willBeVisible || willBeHidden) && !scrollTimeout) {
     scrollTimeout = setTimeout(() => {
       Velocity(
         arrow,
@@ -50,7 +46,9 @@ const scrollCallback = () => {
         }
       );
       isVisible = scrollTop > triggerAnchorPos;
-      willChangeVisibility = false;
+      willBeVisible = false;
+      willBeHidden = false;
+      scrollTimeout = null;
     }, DEBOUNCE_DELAY_MS);
   }
 };
