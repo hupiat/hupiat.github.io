@@ -10,7 +10,7 @@ a {
 }
 #up-arrow {
   position: fixed;
-  bottom: 30px;
+  bottom: 60px;
   right: -150px;
   background-color: #e8ecf1;
   border-radius: 50px;
