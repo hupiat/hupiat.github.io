@@ -1,4 +1,5 @@
-const ANIM_DURATION_MS = 150;
+const BUTTON_ANIM_DURATION_MS = 150;
+const SCROLL_ANIM_DURATION_MS = 500;
 const DEBOUNCE_DELAY_MS = 300;
 const MAX_WIDTH_MOBILE_PX = 1280;
 const TRIGGER_SCROLL_MOBILE_PX = 800;
@@ -43,7 +44,7 @@ const scrollCallback = () => {
               : UP_ARROW_HIDDEN_RIGHT_PX,
         },
         {
-          duration: ANIM_DURATION_MS,
+          duration: BUTTON_ANIM_DURATION_MS,
           easing: "ease-in-out",
         }
       );
@@ -80,7 +81,7 @@ arrow.addEventListener("click", () => {
     },
     {
       easing: [500, 50],
-      duration: 500,
+      duration: SCROLL_ANIM_DURATION_MS,
     }
   );
 });
