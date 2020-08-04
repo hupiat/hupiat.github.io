@@ -27,7 +27,10 @@ const scrollCallback = () => {
   const scrollTop = getScrollValue();
   const shouldBeVisible = scrollTop > triggerAnchorPos && !isVisible;
   const shouldBeHidden = scrollTop < triggerAnchorPos && isVisible;
-  if ((shouldBeVisible && willBeHidden) || (shouldBeHidden && willBeVisible)) {
+  if (
+    (shouldBeVisible && willBeHidden) ||
+    (shouldBeHidden && willBeVisible && scrollTimeout)
+  ) {
     clearTimeout(scrollTimeout);
     scrollTimeout = null;
   }
@@ -70,6 +73,7 @@ window.addEventListener("resize", () => {
         ? TRIGGER_SCROLL_MOBILE_PX
         : TRIGGER_SCROLL_DESKTOP_PX;
     scrollCallback();
+    resizeTimeout = null;
   }, DEBOUNCE_DELAY_MS);
 });
 
