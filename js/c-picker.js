@@ -21,10 +21,11 @@ if (colorSaved) {
 }
 
 const pickers = document.getElementsByClassName("c-picker");
+const colorsNames = Object.keys(COLORS_MAP);
 for (const picker of pickers) {
   const maybeColors = picker.className.split(" ");
   for (const maybeColor of maybeColors) {
-    if (Object.keys(COLORS_MAP).some((c) => c === maybeColor.trim())) {
+    if (colorsNames.some((c) => c === maybeColor.trim())) {
       picker.addEventListener("click", () => setNavColor(maybeColor));
       break;
     }
