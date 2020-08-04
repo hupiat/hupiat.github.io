@@ -1,4 +1,4 @@
-const STORAGE_NAME = "hupiat-c-picker";
+const STORAGE_NAME = "c-picker";
 
 const COLORS_MAP = {
   midnight: "#2c3e50",
@@ -24,7 +24,7 @@ const pickers = document.getElementsByClassName("c-picker");
 for (const picker of pickers) {
   const colors = picker.className.split(" ");
   for (const maybeColor of colors) {
-    if (Object.keys(COLORS_MAP).some((c) => c === maybeColor)) {
+    if (Object.keys(COLORS_MAP).some((c) => c === maybeColor.trim())) {
       picker.addEventListener("click", () => setNavColor(maybeColor));
       break;
     }
