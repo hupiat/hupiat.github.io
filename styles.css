@@ -106,6 +106,10 @@ a {
   margin: auto;
   position: relative;
   top: 25px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #e8ecf1;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
   padding: 10px 20px;
 }
 #nav .c-picker {
@@ -253,6 +257,10 @@ a {
     margin-right: 50px;
     top: unset;
     padding: unset;
+    border: unset;
+    border-radius: unset;
+    background-color: unset;
+    box-shadow: unset;
   }
   #nav #education {
     top: 100px;
