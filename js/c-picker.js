@@ -10,23 +10,22 @@ const COLORS_MAP = {
 
 const nav = document.getElementById("nav");
 
-const setNavColor = (color) => {
-  nav.style.backgroundColor = COLORS_MAP[color];
-  localStorage.setItem(STORAGE_NAME, color);
-};
-
 const colorSaved = localStorage.getItem(STORAGE_NAME);
 if (colorSaved) {
-  setNavColor(colorSaved);
+  nav.style.backgroundColor = COLORS_MAP[colorSaved];
 }
 
 const pickers = document.getElementsByClassName("c-picker");
 const colorsNames = Object.keys(COLORS_MAP);
 for (const picker of pickers) {
   const maybeColors = picker.className.split(" ");
-  for (const maybeColor of maybeColors) {
-    if (colorsNames.some((c) => c === maybeColor.trim())) {
-      picker.addEventListener("click", () => setNavColor(maybeColor));
+  for (let maybeColor of maybeColors) {
+    maybeColor = maybeColor.trim();
+    if (colorsNames.some((c) => c === maybeColor)) {
+      picker.addEventListener("click", () => {
+        nav.style.backgroundColor = COLORS_MAP[maybeColor];
+        localStorage.setItem(STORAGE_NAME, maybeColor);
+      });
       break;
     }
   }
