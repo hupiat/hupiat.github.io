@@ -102,10 +102,11 @@ a {
 #nav #c-pickers-container {
   display: flex;
   justify-content: space-between;
-  margin-left: 30vw;
-  margin-right: 30vw;
+  width: 150px;
+  margin: auto;
   position: relative;
-  top: 45px;
+  top: 25px;
+  padding: 10px 20px;
 }
 #nav .c-picker {
   width: 20px;
@@ -251,6 +252,7 @@ a {
     margin-left: 50px;
     margin-right: 50px;
     top: unset;
+    padding: unset;
   }
   #nav #education {
     top: 100px;
@@ -292,6 +294,11 @@ a {
   }
   #nav #education {
     top: 50px;
+  }
+}
+@media (min-width: 1280px) and (max-height: 700px) {
+  #nav #c-pickers-container {
+    display: none;
   }
 }
 @media (max-width: 280px) {
