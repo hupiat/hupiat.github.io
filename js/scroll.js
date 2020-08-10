@@ -1,5 +1,5 @@
 const BUTTON_ANIM_DURATION_MS = 150;
-const SCROLL_ANIM_DURATION_MS = 500;
+const SCROLL_ANIM_DURATION_MS = 400;
 const DEBOUNCE_DELAY_MS = 300;
 const MAX_WIDTH_MOBILE_PX = 1280;
 const TRIGGER_SCROLL_MOBILE_PX = 800;
@@ -84,8 +84,8 @@ arrow.addEventListener("click", () => {
       scrollTop: 0,
     },
     {
-      easing: [500, 50],
-      duration: SCROLL_ANIM_DURATION_MS,
+      easing: "ease-in-out",
+      duration: getScrollValue(),
     }
   );
 });
