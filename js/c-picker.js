@@ -1,5 +1,5 @@
 const STORAGE_NAME = "c-picker";
-const MOBILE_BLUR_DELAY_MS = 100;
+const MOBILE_BLUR_DELAY_MS = 200;
 
 const COLORS_MAP = {
   midnight: "#2c3e50",
