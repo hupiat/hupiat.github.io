@@ -5,7 +5,7 @@ const TRIGGER_SCROLL_MOBILE_PX = 500;
 const TRIGGER_SCROLL_DESKTOP_PX = 100;
 const UP_ARROW_VISIBLE_RIGHT_PX = 50;
 const UP_ARROW_HIDDEN_RIGHT_PX = -100;
-let IS_MOBILE = document.body.offsetWidth < MAX_WIDTH_MOBILE_PX;
+const IS_MOBILE = () => document.body.offsetWidth < MAX_WIDTH_MOBILE_PX;
 
 const debouncedHandler = (
   callback = () => {},
@@ -14,12 +14,13 @@ const debouncedHandler = (
   refresh = true
 ) => {
   if (timeout && refresh) {
-    clearTimeout(internalTimeout);
+    clearTimeout(timeout);
   }
   timeout = setTimeout(() => {
     callback();
     timeout = null;
   }, delay);
+  return timeout;
 };
 
 const resizeHandler = (callback = () => {}) => {
@@ -28,23 +29,19 @@ const resizeHandler = (callback = () => {}) => {
   });
 };
 
-resizeHandler(
-  () => (IS_MOBILE = document.body.offsetWidth < MAX_WIDTH_MOBILE_PX)
-);
-
 // Custom extensions needed for mobile browsers behaviours
 
 const mobiles = (element) => {
   const freezeFocus = () =>
     setTimeout(() => {
-      if (IS_MOBILE && !element.classList.contains("no-hover")) {
+      if (IS_MOBILE() && !element.classList.contains("no-hover")) {
         element.blur();
         element.classList.add("no-hover");
       }
     }, 1);
   const restoreFocus = () =>
     setTimeout(() => {
-      if (IS_MOBILE && element.classList.contains("no-hover")) {
+      if (element.classList.contains("no-hover")) {
         element.classList.remove("no-hover");
       }
     }, 1);
