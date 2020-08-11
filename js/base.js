@@ -47,7 +47,7 @@ const mobiles = (element) => {
       if (IS_MOBILE && element.classList.contains("no-hover")) {
         element.classList.remove("no-hover");
       }
-    });
+    }, 1);
   resizeHandler(restoreFocus);
   return {
     freezeFocus,
