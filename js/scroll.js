@@ -84,7 +84,10 @@ arrow.addEventListener("click", () => {
     },
     {
       easing: "ease-in-out",
-      duration: getScrollValue() / 3,
+      duration:
+        document.body.offsetWidth < MAX_WIDTH_MOBILE_PX
+          ? getScrollValue() / 6
+          : getScrollValue() / 3,
     }
   );
 });
