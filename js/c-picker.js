@@ -1,4 +1,5 @@
 const STORAGE_NAME = "c-picker";
+const MOBILE_BLUR_DELAY_MS = 100;
 
 const COLORS_MAP = {
   midnight: "#2c3e50",
@@ -23,8 +24,11 @@ for (const picker of pickers) {
     maybeColor = maybeColor.trim();
     if (colorsNames.some((c) => c === maybeColor)) {
       picker.addEventListener("click", () => {
+        const mobileHandler = mobiles(picker);
+        mobileHandler.restoreFocus();
         nav.style.backgroundColor = COLORS_MAP[maybeColor];
         localStorage.setItem(STORAGE_NAME, maybeColor);
+        debouncedHandler(mobileHandler.freezeFocus, MOBILE_BLUR_DELAY_MS);
       });
       break;
     }
