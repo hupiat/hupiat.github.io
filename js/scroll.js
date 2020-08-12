@@ -6,26 +6,24 @@ const getScrollValue = () => {
 let scrollTimeout;
 let willBeVisible = false;
 let isVisible = false;
-let triggerAnchorPos =
-  document.body.offsetWidth < MAX_WIDTH_MOBILE_PX
-    ? TRIGGER_SCROLL_MOBILE_PX
-    : TRIGGER_SCROLL_DESKTOP_PX;
+let triggerAnchorPos = IS_MOBILE()
+  ? TRIGGER_SCROLL_MOBILE_PX
+  : TRIGGER_SCROLL_DESKTOP_PX;
 
 const arrow = document.getElementById("up-arrow");
 
 const scrollCallback = () => {
   const scrollTop = getScrollValue();
   const scrollTriggered = scrollTop > triggerAnchorPos;
-  const shouldBeVisible = scrollTriggered && !isVisible;
-  if (scrollTimeout && willBeVisible === shouldBeVisible) {
+  if (scrollTimeout && willBeVisible !== scrollTriggered) {
     clearTimeout(scrollTimeout);
     scrollTimeout = null;
-    willBeVisible = shouldBeVisible;
   }
   if (
-    ((shouldBeVisible && !isVisible) || (!shouldBeVisible && isVisible)) &&
+    ((scrollTriggered && !isVisible) || (!scrollTriggered && isVisible)) &&
     !scrollTimeout
   ) {
+    willBeVisible = scrollTriggered;
     scrollTimeout = debouncedHandler(
       () => {
         Velocity(
@@ -40,7 +38,7 @@ const scrollCallback = () => {
             easing: "ease-in-out",
           }
         );
-        isVisible = scrollTriggered;
+        isVisible = willBeVisible;
         willBeVisible = false;
       },
       undefined,
