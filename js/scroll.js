@@ -3,18 +3,18 @@ const getScrollValue = () => {
   return el.scrollTop;
 };
 
+const getTriggerAnchorPos = () =>
+  IS_MOBILE() ? TRIGGER_SCROLL_MOBILE_PX : TRIGGER_SCROLL_DESKTOP_PX;
+
 let scrollTimeout;
 let willBeVisible = false;
 let isVisible = false;
-let triggerAnchorPos = IS_MOBILE()
-  ? TRIGGER_SCROLL_MOBILE_PX
-  : TRIGGER_SCROLL_DESKTOP_PX;
 
 const arrow = document.getElementById("up-arrow");
 
 const scrollCallback = () => {
   const scrollTop = getScrollValue();
-  const scrollTriggered = scrollTop > triggerAnchorPos;
+  const scrollTriggered = scrollTop > getTriggerAnchorPos();
   if (scrollTimeout && willBeVisible !== scrollTriggered) {
     clearTimeout(scrollTimeout);
     scrollTimeout = null;
@@ -50,13 +50,6 @@ const scrollCallback = () => {
 
 document.getElementById("main").addEventListener("scroll", scrollCallback);
 document.addEventListener("scroll", scrollCallback);
-
-resizeHandler(() => {
-  triggerAnchorPos = IS_MOBILE()
-    ? TRIGGER_SCROLL_MOBILE_PX
-    : TRIGGER_SCROLL_DESKTOP_PX;
-  scrollCallback();
-});
 
 arrow.addEventListener("click", () => {
   const mobileHandler = mobiles(arrow);
