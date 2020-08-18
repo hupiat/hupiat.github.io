@@ -51,8 +51,8 @@ const scrollCallback = () => {
 document.getElementById("main").addEventListener("scroll", scrollCallback);
 document.addEventListener("scroll", scrollCallback);
 
+const mobileHandler = mobiles(arrow);
 arrow.addEventListener("click", () => {
-  const mobileHandler = mobiles(arrow);
   mobileHandler.restoreFocus();
   Velocity(
     document.body,

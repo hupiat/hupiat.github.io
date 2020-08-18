@@ -23,8 +23,8 @@ for (const picker of pickers) {
   for (let maybeColor of maybeColors) {
     maybeColor = maybeColor.trim();
     if (colorsNames.some((c) => c === maybeColor)) {
+      const mobileHandler = mobiles(picker);
       picker.addEventListener("click", () => {
-        const mobileHandler = mobiles(picker);
         mobileHandler.restoreFocus();
         nav.style.backgroundColor = COLORS_MAP[maybeColor];
         localStorage.setItem(STORAGE_NAME, maybeColor);
