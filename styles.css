@@ -28,6 +28,8 @@ a {
 }
 #coffee-button {
   margin-left: 50px;
+  margin-bottom: -10px;
+  margin-top: -10px;
   background-color: #2e3131;
   color: #e8ecf1;
 }
