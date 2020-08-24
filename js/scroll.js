@@ -61,7 +61,7 @@ arrow.addEventListener("click", () => {
     },
     {
       easing: "ease-in-out",
-      duration: getScrollValue() / 3,
+      duration: 1000 - getScrollValue(),
     }
   ).then(mobileHandler.freezeFocus);
 });
