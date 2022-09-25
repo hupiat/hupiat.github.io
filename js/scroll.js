@@ -35,7 +35,6 @@ const scrollCallback = () => {
           },
           {
             duration: BUTTON_ANIM_DURATION_MS,
-            easing: "ease-in-out",
           }
         );
         isVisible = willBeVisible;
@@ -60,7 +59,6 @@ arrow.addEventListener("click", () => {
       scrollTop: 0,
     },
     {
-      easing: "ease-in-out",
       duration: IS_MOBILE() ? 600 : 300,
     }
   ).then(mobileHandler.freezeFocus);
