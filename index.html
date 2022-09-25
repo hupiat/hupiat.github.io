@@ -103,23 +103,37 @@
         <h1 id="main-title">
           Here, there are my personal projects you can browse in <img src="./assets/emoji-winking.png" class="img-emoji" alt="emoji winking" style="top: 3px;" />
         </h1>
-        <form
-          action="https://www.paypal.com/cgi-bin/webscr"
-          method="post"
-          target="_top"
-        >
-          <input type="hidden" name="cmd" value="_s-xclick" />
-          <input type="hidden" name="hosted_button_id" value="ZBRKCTNR8ESQY" />
-          <button id="coffee-button" class="button" type="submit">
-            Buy me a coffee !
-            <img
-              src="./assets/coffee.svg"
-              alt="coffee"
-              class="button-svg"
-              type="image/svg+xml"
-            />
-          </button>
-        </form>
+        <div class="header-container">
+          <form
+            action="https://www.paypal.com/cgi-bin/webscr"
+            method="post"
+            target="_top"
+          >
+            <input type="hidden" name="cmd" value="_s-xclick" />
+            <input type="hidden" name="hosted_button_id" value="ZBRKCTNR8ESQY" />
+              <button class="button header-button" type="submit">
+                Buy me a coffee !
+                <img
+                  src="./assets/emoji-coffee.svg"
+                  alt="emoji coffee"
+                  class="header-btn-img"
+                  type="image/svg+xml"
+                  style="bottom: 1px;"
+                />
+              </button>
+          </form>
+          <a href="mailto:hugo.piat@icloud.com">
+            <button class="button header-button">
+              <img
+              src="./assets/emoji-bomb.png"
+              alt="emoji bomb"
+              class="header-btn-img"
+              style="margin-right: 5px;"
+              />
+              Or mail me
+            </button>
+          </a>
+        </div>
         <div id="project-cards-container">
           <a
             href="https://github.com/hupiat/go-bobby"

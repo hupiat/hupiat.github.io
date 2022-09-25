@@ -26,7 +26,11 @@ a {
 #up-arrow:not(.no-hover):hover {
   background-color: #bdc3c7;
 }
-#coffee-button {
+.header-container {
+  display: flex;
+  justify-content: flex-start;
+}
+.header-button {
   margin-left: 45px;
   background-color: #2e3131;
   color: #e8ecf1;
@@ -51,7 +55,7 @@ a {
   transform: scale(1.1);
   box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
-.button-svg, .img-emoji {
+.header-btn-img, .img-emoji {
   width: 30px;
   height: 30px;
   margin-left: 5px;
@@ -267,7 +271,7 @@ a {
 /* MEDIA QUERIES */
 
 @media (min-width: 1280px) {
-  #coffee-button {
+  .header-button {
     margin-bottom: -10px;
     margin-top: -10px;
   }
