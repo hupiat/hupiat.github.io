@@ -190,83 +190,6 @@ a {
   position: relative;
   top: 140px;
 }
-#hover-workaround-safari {
-  visibility: hidden;
-  margin-top: -100px;
-  margin-bottom: 50px;
-}
-#project-cards-container {
-  overflow: -moz-hidden-unscrollable;
-  overflow: hidden;
-}
-.project-card {
-  position: relative;
-  text-align: center;
-  margin-top: 15px;
-  background-color: #2e3131;
-  padding: 30px;
-  -webkit-transition: all 0.15s ease-in-out;
-  -moz-transition: all 0.15s ease-in-out;
-  -o-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
-  cursor: pointer;
-}
-.project-card:not(.no-hover):hover {
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -o-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
-  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
-}
-.project-tags {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.tag {
-  border-radius: 10px;
-  padding: 5px;
-  margin: 10px 5px;
-  color: #ececec;
-}
-.tag.red {
-  background-color: #c0392b;
-}
-.tag.red-light {
-  background-color: #e74c3c;
-}
-.tag.purple-light {
-  background-color: #9b59b6;
-}
-.tag.purple {
-  background-color: #674172;
-}
-.tag.yellow {
-  background-color: #e2b13c;
-}
-.tag.gold {
-  background-color: #ccae62;
-}
-.tag.green {
-  background-color: #019875;
-}
-.tag.green-light {
-  background-color: #2ecc71;
-}
-.tag.blue {
-  background-color: #2980b9;
-}
-.tag.orange {
-  background-color: #d35400;
-}
-.tag.midnight {
-  background-color: #395068;
-}
-.tag.grey {
-  background-color: #7f8c8d;
-}
 
 /* MEDIA QUERIES */
 
@@ -277,9 +200,6 @@ a {
   }
   #up-arrow {
     padding: 12px;
-  }
-  #hover-workaround-safari {
-    margin-bottom: 75px;
   }
   #layout {
     padding-left: 300px;
@@ -346,12 +266,6 @@ a {
     width: 100%;
     margin: 0px;
     padding: 0px;
-  }
-  .project-card {
-    top: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-radius: 5px;
   }
 }
 @media (min-width: 1280px) and (max-height: 800px) {
