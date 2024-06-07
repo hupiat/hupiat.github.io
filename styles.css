@@ -29,6 +29,7 @@ a {
 .header-container {
   display: flex;
   justify-content: flex-start;
+  margin-top: 7.5vh;
 }
 .header-button {
   margin-left: 45px;
@@ -55,10 +56,12 @@ a {
   transform: scale(1.1);
   box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
-.header-btn-img, .img-emoji {
+.header-btn-img,
+.img-emoji {
   width: 30px;
   height: 30px;
   margin-left: 5px;
+  margin-right: 5px;
   position: relative;
 }
 
@@ -182,15 +185,6 @@ a {
   background-color: #3d130e;
 }
 
-/* CARDS */
-
-#main-title {
-  margin: 50px;
-  margin-bottom: 150px;
-  position: relative;
-  top: 140px;
-}
-
 /* MEDIA QUERIES */
 
 @media (min-width: 1280px) {
@@ -251,8 +245,8 @@ a {
     color: #bdc3c7;
   }
   #main-title {
+    position: relative;
     top: 20px;
-    margin-bottom: 50px;
   }
   #nav #photo {
     margin-top: 50px;
@@ -264,8 +258,19 @@ a {
     position: relative;
     overflow: auto;
     width: 100%;
-    margin: 0px;
+    margin: 5vh 10vw;
     padding: 0px;
+  }
+}
+@media (max-width: 1280px) {
+  #main {
+    position: absolute;
+    top: 650px;
+    margin: 5vh 10vw;
+  }
+  .header-container {
+    display: flex;
+    justify-content: flex-start;
   }
 }
 @media (min-width: 1280px) and (max-height: 800px) {
