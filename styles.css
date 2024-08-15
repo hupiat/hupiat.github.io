@@ -272,6 +272,9 @@ a {
     display: flex;
     justify-content: flex-start;
   }
+  #nav #c-pickers-container {
+    top: 10vh;
+  }
 }
 @media (min-width: 1280px) and (max-height: 800px) {
   #nav .line {
