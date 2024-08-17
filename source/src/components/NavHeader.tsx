@@ -5,7 +5,7 @@ import Avatar from "../assets/avatar.png";
 import { GithubFilled, LinkedinFilled, MediumCircleFilled } from "@ant-design/icons";
 import { redirect } from "../utils/tools";
 
-export default function Navbar() {
+export default function NavHeader() {
     
     return (
         <Flex style={{
