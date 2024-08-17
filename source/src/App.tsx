@@ -3,20 +3,20 @@ import './App.css';
 import { Layout } from 'antd';
 import { Content, Header } from 'antd/es/layout/layout';
 import Navbar from './components/Navbar';
-import { BACKGROUND_COLOR, PRIMARY_COLOR } from './utils/constants';
+import { COLOR_BACKGROUND, COLOR_DARK_PRIMARY, COLOR_PRIMARY } from './utils/constants';
 
 function App() {
   return (
     <Layout>
       <Header style={{
-        backgroundColor: BACKGROUND_COLOR,
-        borderBottom: "solid 5px " + PRIMARY_COLOR,
-        height: "200px" 
+        backgroundColor: COLOR_DARK_PRIMARY,
+        borderBottom: "solid 5px " + COLOR_PRIMARY,
+        height: "450px" 
       }} >
         <Navbar />
       </Header>
       <Content style={{
-        backgroundColor: BACKGROUND_COLOR,
+        backgroundColor: COLOR_BACKGROUND,
         position: "relative",
         top: "5vh"
       }} >
