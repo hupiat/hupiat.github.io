@@ -46,8 +46,8 @@ export default function NavHeader() {
             </Layout>
 
             <img src={Avatar} alt="avatar" style={{
-                width: "min(50vw, 300px)",
-                height: "min(50vw, 300px)"
+                width: "min(30vw, 300px)",
+                height: "min(30vw, 300px)"
             }} />
         </Flex>
     );
