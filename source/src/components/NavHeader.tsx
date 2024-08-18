@@ -18,7 +18,7 @@ export default function NavHeader() {
             }}>
                 <h1>Hugo Piat</h1>
                 <span>26 y.o</span>
-                <h3>Professional Software Engineer</h3>
+                <h3>Professional Software Engineer (web & mobile)</h3>
                 <Layout style={{
                     display: "flex",
                     flexDirection: "row",

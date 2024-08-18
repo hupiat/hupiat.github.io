@@ -45,7 +45,8 @@ function App() {
             }}
             altImage="logo UCA"
             webSiteUri="uca.fr"
-          />
+            description="Bachelor universitaire de technologie obtenu avec mention AB, en informatique et en développement d'applications intranet/internet, 2550 heures en tout (programme disponible sur mon linkedin)."
+            />
           <AssetCard
             image={LogoCaillot}
             altImage="logo Caillot"
@@ -53,22 +54,26 @@ function App() {
               marginLeft: "10px"
             }}
             webSiteUri="caillot.fr"
-          />
+            description="Stage universitaire de 4 mois. Développement d'une application Android de gestion des process et d'une plateforme de mise à jour interne."
+            />
           <AssetCard
             image={LogoDevcsi}
             altImage="logo DevCSI"
             webSiteUri="devcsi.fr"
-          />
+            description="Alternance universitaire de 1 an, ainsi que 10 mois de CDI. Recherche et développement en ingénierie logistique (norme S3000L). Application Android de traçabilité RFID des trains."
+            />
           <AssetCard
             image={LogoPolyconseil}
             altImage="logo Polyconseil"
             webSiteUri="polyconseil.fr"
-          />
+            description="8 mois de CDI suite à une coupure sabbatique à Paris. Logiciel de déclarations des émissions polluantes pour le Ministère de l'écologie. Logiciel de gestion des ressources humaines pour le groupe Bolloré."
+            />
           <AssetCard
             image={LogoDevcsi}
             altImage="logo DevCSI"
             webSiteUri="devcsi.fr"
-          />
+            description="2 ans de CDI en assumant une fonction de Tech Lead. Reprise des travaux de R&D. Logiciel de business intelligence pour SNCF Réseau. Logiciel de suivi de relation client pour Ecoconseil énergies"
+            />
         </Flex>
       </Content>
       <Footer style={{
