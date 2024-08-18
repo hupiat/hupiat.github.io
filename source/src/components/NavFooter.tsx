@@ -9,7 +9,7 @@ interface IProps {
 export default function NavFooter({ imagePaths, imageAlts } : IProps) {
 
     return (    
-        <Carousel arrows infinite={false} autoplay>
+        <Carousel infinite={false} autoplay>
             {
                 imagePaths.map((img, i) => <div key={i}>
                     <img src={img} alt={imageAlts[i]} />
