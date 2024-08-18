@@ -40,7 +40,7 @@ function App() {
           <AssetCard
             image={LogoUca}
             imageStyle={{
-              maxWidth: "60%",
+              maxWidth: "52.5%",
               maxHeight: "auto"
             }}
             altImage="logo UCA"

@@ -18,9 +18,9 @@ export default function NavFooter({ imagePaths, imageAlts } : IProps) {
             {
                 imagePaths.map((img, i) => <div key={i}>
                     <img src={img} alt={imageAlts[i]} style={{
-                    width: "300px",
-                    margin: "auto"
-                }} />
+                        width: "300px",
+                        margin: "auto"
+                    }} />
                 </div>)
             }
         </Carousel>

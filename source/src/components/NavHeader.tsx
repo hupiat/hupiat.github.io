@@ -17,7 +17,7 @@ export default function NavHeader() {
                 backgroundColor: COLOR_DARK_PRIMARY
             }}>
                 <h1>Hugo Piat</h1>
-                <span>26 y.o</span>
+                <span>26 y.o, <br /> France</span>
                 <h3>Professional Software Engineer (web & mobile)</h3>
                 <Layout style={{
                     display: "flex",
