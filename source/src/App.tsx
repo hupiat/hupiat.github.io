@@ -15,6 +15,7 @@ import LogoSncfReseau from "./assets/sncf_reseau_logo.png";
 import AssetCard from './components/AssetCard';
 import NavHeader from './components/NavHeader';
 import NavFooter from './components/NavFooter';
+import NavFloatButton from './components/NavFloatButton';
 
 
 function App() {
@@ -75,6 +76,7 @@ function App() {
             description="2 ans de CDI en assumant une fonction de Tech Lead. Reprise des travaux de R&D. Logiciel de business intelligence pour SNCF Réseau. Logiciel de suivi de relation client pour Ecoconseil énergies."
             />
         </Flex>
+        <NavFloatButton />
       </Content>
       <Footer style={{
         backgroundColor: COLOR_BACKGROUND

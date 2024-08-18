@@ -36,7 +36,8 @@ export default function AssetCard({ image, altImage, imageStyle, webSiteUri, des
                 style={{
                     display: "flex",
                     justifyContent: "center",
-                    margin: "25px 50px"
+                    margin: "25px 50px",
+                    backgroundColor: "whitesmoke"
                 }}  
                 cover={<img src={image} alt={altImage} style={{...imageStyle, visibility: isFlipped() ? "hidden" : "visible" }} />} 
                 actions={[
