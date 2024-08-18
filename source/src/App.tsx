@@ -72,7 +72,7 @@ function App() {
             image={LogoDevcsi}
             altImage="logo DevCSI"
             webSiteUri="devcsi.fr"
-            description="2 ans de CDI en assumant une fonction de Tech Lead. Reprise des travaux de R&D. Logiciel de business intelligence pour SNCF Réseau. Logiciel de suivi de relation client pour Ecoconseil énergies"
+            description="2 ans de CDI en assumant une fonction de Tech Lead. Reprise des travaux de R&D. Logiciel de business intelligence pour SNCF Réseau. Logiciel de suivi de relation client pour Ecoconseil énergies."
             />
         </Flex>
       </Content>
