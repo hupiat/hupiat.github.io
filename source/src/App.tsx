@@ -19,7 +19,9 @@ import NavFooter from './components/NavFooter';
 
 function App() {
   return (
-    <Layout>
+    <Layout style={{
+      backgroundColor: COLOR_BACKGROUND
+    }}>
       <Header style={{
         backgroundColor: COLOR_DARK_PRIMARY,
         borderBottom: "solid 5px " + COLOR_PRIMARY,
@@ -69,7 +71,9 @@ function App() {
           />
         </Flex>
       </Content>
-      <Footer>
+      <Footer style={{
+        backgroundColor: COLOR_BACKGROUND
+      }}>
         <NavFooter imagePaths={[
           LogoMinistere, LogoSncfReseau, LogoEcoconseil, LogoBollore, LogoSncf, 
         ]} imageAlts={["logo Ministère de L'écologie, logo SNCF Réseau, logo Ecoconseil Energies, logo Bolloré, logo SNCF"]} />

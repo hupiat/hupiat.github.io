@@ -10,10 +10,10 @@ interface IProps {
 export default function NavFooter({ imagePaths, imageAlts } : IProps) {
 
     return (    
-        <Carousel infinite={false} autoplay style={{
+        <Carousel arrows swipeToSlide style={{
             marginTop: "15vh",
             borderTop: "5px solid " + COLOR_PRIMARY,
-            paddingTop: "5vh"
+            paddingTop: "5vh",
         }}>
             {
                 imagePaths.map((img, i) => <div key={i}>
