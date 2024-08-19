@@ -76,7 +76,7 @@ function App() {
           {/* <AssetCard
             image={LogoLacour}
             imageStyle={{ marginLeft: "10px", marginTop: "10px" }}
-            altImage="logo Lacour concept"
+            altImage="logo Lacour Concept"
             webSiteUri="groupe-lacour.fr"
             description="Actuellement en poste de Développeur Full-Stack pour les professionnels de l'industrie automobile."
             /> */}
