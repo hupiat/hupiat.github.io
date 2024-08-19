@@ -12,8 +12,8 @@ interface IProps {
     description: string;
 }
 
-export const CARD_HEIGHT_PX = 275;
-export const CARD_WIDTH_PX = 300;
+export const CARD_HEIGHT_PX = 225;
+export const CARD_WIDTH_PX = 250;
 
 export default function AssetCard({ image, altImage, imageStyle, webSiteUri, description }: IProps) {
     const [flipValue, setFlipValue] = useState<number>(0);

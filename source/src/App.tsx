@@ -37,7 +37,8 @@ function App() {
         top: "5vh"
       }} >
         <Flex style={{
-          flexWrap: "wrap"
+          flexWrap: "wrap",
+          justifyContent: "center"
         }}>
           <AssetCard
             image={LogoUca}
