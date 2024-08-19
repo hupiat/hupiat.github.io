@@ -12,10 +12,10 @@ export default function NavFloatButton() {
             icon={<PlusOutlined />}
             >
             <a href="CV-en.pdf" download style={{ margin: "10px" }}>
-                <FloatButton icon={<BookOutlined />} />
+                <FloatButton icon={<BookOutlined />} type="primary" />
             </a>
             <a href={`mailto:${MAIL_CONTACT}`} style={{ margin: "10px" }}>
-                <FloatButton icon={<EditOutlined />} />
+                <FloatButton icon={<EditOutlined />} type="primary" />
             </a>    
         </FloatButton.Group>
     )
