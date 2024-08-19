@@ -44,7 +44,7 @@ function App() {
             image={LogoUca}
             altImage="logo UCA"
             webSiteUri="uca.fr"
-            description="Bachelor universitaire de technologie obtenu avec mention AB, en informatique et en développement d'applications intranet/internet, 2550 heures en tout (programme disponible sur mon linkedin)."
+            description="Bachelor universitaire de technologie obtenu avec mention AB, en informatique et en développement d'applications intranet/internet, 2550 heures."
             />
           <AssetCard
             image={LogoCaillot}
@@ -59,19 +59,19 @@ function App() {
             image={LogoDevcsi}
             altImage="logo DevCSI"
             webSiteUri="devcsi.fr"
-            description="Alternance universitaire de 1 an, ainsi que 10 mois de CDI. Recherche et développement en ingénierie logistique (norme S3000L). Application Android de traçabilité RFID des trains."
+            description="Alternance universitaire de 1 an, ainsi que 10 mois de CDI. Recherche et développement en ingénierie logistique (norme S3000L). Traçabilité RFID des trains."
             />
           <AssetCard
             image={LogoPolyconseil}
             altImage="logo Polyconseil"
             webSiteUri="polyconseil.fr"
-            description="8 mois de CDI suite à une coupure sabbatique à Paris. Logiciel de déclarations des émissions polluantes pour le Ministère de l'écologie. Logiciel de gestion des ressources humaines pour le groupe Bolloré."
+            description="8 mois de CDI suite à une coupure sabbatique à Paris. Déclarations des émissions polluantes pour le Ministère. Gestion RH pour le groupe Bolloré."
             />
           <AssetCard
             image={LogoDevcsi}
             altImage="logo DevCSI"
             webSiteUri="devcsi.fr"
-            description="2 ans de CDI en assumant une fonction de Tech Lead. Reprise des travaux de R&D. Logiciel de business intelligence pour SNCF Réseau. Logiciel de suivi de relation client pour Ecoconseil énergies."
+            description="2 ans de CDI en assumant une fonction de Tech Lead. Reprise des travaux de R&D. Business intelligence pour SNCF Réseau. Suivi de relation client pour Ecoconseil énergies."
             />
           {/* <AssetCard
             image={LogoLacour}

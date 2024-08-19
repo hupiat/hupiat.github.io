@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.afd13d4b.css",
-    "main.js": "/static/js/main.dfa9b87f.js",
+    "main.js": "/static/js/main.0a66ad23.js",
     "static/js/453.01156e31.chunk.js": "/static/js/453.01156e31.chunk.js",
     "static/media/avatar.png": "/static/media/avatar.e965a286e4717ccd6ec2.png",
     "static/media/uca_logo.png": "/static/media/uca_logo.a158377a90db01aef076.png",
@@ -13,11 +13,11 @@
     "static/media/devcsi_logo.png": "/static/media/devcsi_logo.1a08bc3ebf95952ad4c2.png",
     "index.html": "/index.html",
     "main.afd13d4b.css.map": "/static/css/main.afd13d4b.css.map",
-    "main.dfa9b87f.js.map": "/static/js/main.dfa9b87f.js.map",
+    "main.0a66ad23.js.map": "/static/js/main.0a66ad23.js.map",
     "453.01156e31.chunk.js.map": "/static/js/453.01156e31.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.afd13d4b.css",
-    "static/js/main.dfa9b87f.js"
+    "static/js/main.0a66ad23.js"
   ]
 }
