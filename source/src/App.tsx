@@ -12,6 +12,7 @@ import LogoMinistere from "./assets/ministere_logo.png";
 import LogoEcoconseil from "./assets/ecoconseil_logo.png";
 import LogoSncf from "./assets/sncf_logo.png";
 import LogoSncfReseau from "./assets/sncf_reseau_logo.png";
+import LogoLacour from "./assets/groupe_lacour_logo.png";
 import AssetCard from './components/AssetCard';
 import NavHeader from './components/NavHeader';
 import NavFooter from './components/NavFooter';
@@ -40,10 +41,6 @@ function App() {
         }}>
           <AssetCard
             image={LogoUca}
-            imageStyle={{
-              maxWidth: "52.5%",
-              maxHeight: "auto"
-            }}
             altImage="logo UCA"
             webSiteUri="uca.fr"
             description="Bachelor universitaire de technologie obtenu avec mention AB, en informatique et en développement d'applications intranet/internet, 2550 heures en tout (programme disponible sur mon linkedin)."
@@ -75,6 +72,13 @@ function App() {
             webSiteUri="devcsi.fr"
             description="2 ans de CDI en assumant une fonction de Tech Lead. Reprise des travaux de R&D. Logiciel de business intelligence pour SNCF Réseau. Logiciel de suivi de relation client pour Ecoconseil énergies."
             />
+          {/* <AssetCard
+            image={LogoLacour}
+            imageStyle={{ marginLeft: "10px", marginTop: "10px" }}
+            altImage="logo Lacour concept"
+            webSiteUri="groupe-lacour.fr"
+            description="Actuellement en poste de Développeur Full-Stack pour les professionnels de l'industrie automobile."
+            /> */}
         </Flex>
         <NavFloatButton />
       </Content>

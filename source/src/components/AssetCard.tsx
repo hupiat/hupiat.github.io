@@ -12,6 +12,8 @@ interface IProps {
     description: string;
 }
 
+export const CARD_HEIGHT_PX = 275;
+export const CARD_WIDTH_PX = 300;
 
 export default function AssetCard({ image, altImage, imageStyle, webSiteUri, description }: IProps) {
     const [flipValue, setFlipValue] = useState<number>(0);
@@ -37,14 +39,25 @@ export default function AssetCard({ image, altImage, imageStyle, webSiteUri, des
                     display: "flex",
                     justifyContent: "center",
                     margin: "25px 50px",
-                    backgroundColor: "whitesmoke"
+                    backgroundColor: "whitesmoke",
                 }}  
-                cover={<img src={image} alt={altImage} style={{...imageStyle, visibility: isFlipped() ? "hidden" : "visible" }} />} 
+                cover={<img src={image} alt={altImage} style={{...imageStyle, display: isFlipped() ? "none" : "flex" }} />}
+                styles={{
+                    cover: !isFlipped() ? {
+                        display: "flex",
+                        width: CARD_WIDTH_PX + "px",
+                        height: CARD_HEIGHT_PX + "px"
+                    } : {}
+                }}
                 actions={[
                     <LinkOutlined key="goto" onClick={() => redirect(webSiteUri)} />,
                     <EllipsisOutlined key="ellipsis" onClick={handleDetailsClick} />,
                 ]}>
-                {isFlipped() && <p style={{ transform: "rotateY(180deg)", maxWidth: "500px" }}>{description}</p>}
+                {isFlipped() && <p style={{ 
+                        transform: "rotateY(180deg)",                         
+                        width: CARD_WIDTH_PX + "px",
+                        height: CARD_HEIGHT_PX - 80 + "px" 
+                    }}>{description}</p>}
             </Card>
         </motion.div>
     )
