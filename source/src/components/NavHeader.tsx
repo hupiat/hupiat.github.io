@@ -19,35 +19,38 @@ export default function NavHeader() {
                 <h1>Hugo Piat</h1>
                 <span>26 y.o, <br /> France</span>
                 <h3>Professional Software Engineer (web & mobile)</h3>
-                <Layout style={{
-                    display: "flex",
+                <Flex style={{
                     flexDirection: "row",
                     backgroundColor: COLOR_DARK_PRIMARY
                 }}>
                     <Button 
-                        type="dashed" 
+                        type="primary" 
                         shape="circle" 
                         icon={<LinkedinFilled />} 
                         onClick={() => redirect("linkedin.com/in/hupiat")} 
                         style={{ marginRight: "20px" }} />
                     <Button 
-                        type="dashed" 
+                        type="primary" 
                         shape="circle" 
                         icon={<GithubFilled />} 
                         onClick={() => redirect("github.com/hupiat")} 
                         style={{ margin: "0px 20px" }} />
                     <Button 
-                        type="dashed" 
-                        shape="circle"
+                        type="primary" 
+                        shape="default"
                         onClick={() => redirect("malt.fr/profile/hugopiat")}
                         icon={<MediumCircleFilled />} 
-                        style={{ margin: "0px 20px" }} />
-                </Layout>
+                        style={{ margin: "0px 20px" }}>Send me a project !</Button>
+                </Flex>
             </Layout>
 
             <img src={Avatar} alt="avatar" style={{
                 width: "min(30vw, 300px)",
-                height: "min(30vw, 300px)"
+                height: "min(30vw, 300px)",
+                // display for mobile devices
+                position: "relative",
+                top: "50px",
+                left: "-115px"
             }} />
         </Flex>
     );
