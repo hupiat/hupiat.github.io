@@ -50,7 +50,7 @@ export default function NavHeader() {
                 // display for mobile devices
                 position: "relative",
                 top: "50px",
-                left: "-115px"
+                left: "-150px"
             }} />
         </Flex>
     );
