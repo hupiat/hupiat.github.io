@@ -18,7 +18,7 @@ export default function NavHeader() {
             }}>
                 <h1>Hugo Piat</h1>
                 <span>26 y.o, <br /> France</span>
-                <h3>Professional Software Engineer (web & mobile)</h3>
+                <h3>Professional Software Engineer <br /> (web & mobile)</h3>
                 <Flex style={{
                     flexDirection: "row",
                     backgroundColor: COLOR_DARK_PRIMARY
