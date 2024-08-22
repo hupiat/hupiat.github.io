@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { Flex, Layout } from 'antd';
 import { Content, Footer, Header } from 'antd/es/layout/layout';
 import { COLOR_BACKGROUND, COLOR_DARK_PRIMARY, COLOR_PRIMARY } from './utils/constants';
