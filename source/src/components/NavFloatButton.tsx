@@ -11,8 +11,11 @@ export default function NavFloatButton() {
             type="primary"
             icon={<PlusOutlined />}
             >
+            <a href="CV-fr.pdf" download style={{ margin: "10px" }}>
+                <FloatButton icon={<BookOutlined />} type="primary" badge={{ count: "fr" }} />
+            </a>
             <a href="CV-en.pdf" download style={{ margin: "10px" }}>
-                <FloatButton icon={<BookOutlined />} type="primary" />
+                <FloatButton icon={<BookOutlined />} type="primary" badge={{ count: "en" }} />
             </a>
             <a href={`mailto:${MAIL_CONTACT}`} style={{ margin: "10px" }}>
                 <FloatButton icon={<EditOutlined />} type="primary" />
