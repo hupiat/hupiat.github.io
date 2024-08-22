@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Layout } from 'antd';
+import { Flex, FloatButton, Layout } from 'antd';
 import { Content, Footer, Header } from 'antd/es/layout/layout';
 import { COLOR_BACKGROUND, COLOR_DARK_PRIMARY, COLOR_PRIMARY } from './utils/constants';
 import LogoUca from "./assets/uca_logo.png";
@@ -82,6 +82,12 @@ function App() {
             /> */}
         </Flex>
         <NavFloatButton />
+        <FloatButton.BackTop type="primary" style={{
+          position: "fixed",
+          // should stay values of antd
+          left: "24px",
+          bottom: "48px"
+        }} />
       </Content>
       <Footer style={{
         backgroundColor: COLOR_BACKGROUND
