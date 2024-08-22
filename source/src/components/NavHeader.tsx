@@ -1,4 +1,4 @@
-import { Button, Flex, Layout } from "antd";
+import { Button, Flex } from "antd";
 import React from "react";
 import { COLOR_DARK_PRIMARY } from "../utils/constants";
 import Avatar from "../assets/avatar.png";
@@ -9,10 +9,14 @@ export default function NavHeader() {
     
     return (
         <Flex style={{
-            height: "100%",
+            height: "auto",
+            flexDirection: "row",
+            width: "100%",
+            justifyContent: "space-between",
             backgroundColor: COLOR_DARK_PRIMARY
         }}>
-            <Layout style={{
+            <Flex style={{
+                flexDirection: "column",
                 color: "white",
                 backgroundColor: COLOR_DARK_PRIMARY
             }}>
@@ -37,20 +41,20 @@ export default function NavHeader() {
                         style={{ margin: "0px 20px" }} />
                     <Button 
                         type="primary" 
-                        shape="default"
+                        shape="circle"
                         onClick={() => redirect("malt.fr/profile/hugopiat")}
                         icon={<MediumCircleFilled />} 
-                        style={{ margin: "0px 20px" }}>Send me a project !</Button>
+                        style={{ margin: "0px 20px" }} />
                 </Flex>
-            </Layout>
+            </Flex>
 
             <img src={Avatar} alt="avatar" style={{
                 width: "min(30vw, 300px)",
                 height: "min(30vw, 300px)",
                 // display for mobile devices
                 position: "relative",
-                top: "50px",
-                left: "-150px"
+                top: "100px",
+                left: "-25px"
             }} />
         </Flex>
     );

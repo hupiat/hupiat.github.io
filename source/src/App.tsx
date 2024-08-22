@@ -27,7 +27,8 @@ function App() {
       <Header style={{
         backgroundColor: COLOR_DARK_PRIMARY,
         borderBottom: "solid 5px " + COLOR_PRIMARY,
-        height: "450px" 
+        height: "550px", 
+        display: "flex",
       }} >
         <NavHeader />
       </Header>

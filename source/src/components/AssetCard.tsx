@@ -12,9 +12,6 @@ interface IProps {
     description: string;
 }
 
-export const CARD_HEIGHT_PX = 200;
-export const CARD_WIDTH_PX = 220;
-
 export default function AssetCard({ image, altImage, imageStyle, webSiteUri, description }: IProps) {
     const [flipValue, setFlipValue] = useState<number>(0);
 
@@ -45,8 +42,8 @@ export default function AssetCard({ image, altImage, imageStyle, webSiteUri, des
                 styles={{
                     cover: !isFlipped() ? {
                         display: "flex",
-                        width: CARD_WIDTH_PX + "px",
-                        height: CARD_HEIGHT_PX + "px"
+                        width: "min(200px, 50vw)",
+                        height: "220px"
                     } : {}
                 }}
                 actions={[
@@ -55,8 +52,8 @@ export default function AssetCard({ image, altImage, imageStyle, webSiteUri, des
                 ]}>
                 {isFlipped() && <p style={{ 
                         transform: "rotateY(180deg)",                         
-                        width: CARD_WIDTH_PX + "px",
-                        height: CARD_HEIGHT_PX - 80 + "px" 
+                        width: "min(200px, 50vw)",
+                        height: 220 - 80 + "px" 
                     }}>{description}</p>}
             </Card>
         </motion.div>
