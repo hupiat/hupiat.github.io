@@ -43,7 +43,7 @@ export default function AssetCard({ image, altImage, imageStyle, webSiteUri, des
                     cover: !isFlipped() ? {
                         display: "flex",
                         width: "min(200px, 50vw)",
-                        height: "220px"
+                        height: "200px"
                     } : {}
                 }}
                 actions={[
@@ -53,7 +53,7 @@ export default function AssetCard({ image, altImage, imageStyle, webSiteUri, des
                 {isFlipped() && <p style={{ 
                         transform: "rotateY(180deg)",                         
                         width: "min(200px, 50vw)",
-                        height: 220 - 80 + "px" 
+                        height: 200 - 77.5 + "px" 
                     }}>{description}</p>}
             </Card>
         </motion.div>
