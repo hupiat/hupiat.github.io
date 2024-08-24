@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f20a5250.css",
-    "main.js": "/static/js/main.3b15fa2b.js",
+    "main.css": "/static/css/main.487fac61.css",
+    "main.js": "/static/js/main.a392eb5e.js",
     "static/js/453.01156e31.chunk.js": "/static/js/453.01156e31.chunk.js",
     "static/media/avatar.png": "/static/media/avatar.e965a286e4717ccd6ec2.png",
     "static/media/uca_logo.png": "/static/media/uca_logo.a158377a90db01aef076.png",
@@ -12,12 +12,12 @@
     "static/media/bollore_logo.png": "/static/media/bollore_logo.5854545b1751aeca3d79.png",
     "static/media/devcsi_logo.png": "/static/media/devcsi_logo.1a08bc3ebf95952ad4c2.png",
     "index.html": "/index.html",
-    "main.f20a5250.css.map": "/static/css/main.f20a5250.css.map",
-    "main.3b15fa2b.js.map": "/static/js/main.3b15fa2b.js.map",
+    "main.487fac61.css.map": "/static/css/main.487fac61.css.map",
+    "main.a392eb5e.js.map": "/static/js/main.a392eb5e.js.map",
     "453.01156e31.chunk.js.map": "/static/js/453.01156e31.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f20a5250.css",
-    "static/js/main.3b15fa2b.js"
+    "static/css/main.487fac61.css",
+    "static/js/main.a392eb5e.js"
   ]
 }

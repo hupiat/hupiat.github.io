@@ -20,7 +20,7 @@ export default function NavHeader() {
                 color: "white",
                 backgroundColor: COLOR_DARK_PRIMARY
             }}>
-                <h1>Hugo Piat</h1>
+                <h1>Hugo Piat-Lillo</h1>
                 <span>26 y.o, <br /> France</span>
                 <h3>Professional Software Engineer <br /> (web & mobile)</h3>
                 <Flex style={{
