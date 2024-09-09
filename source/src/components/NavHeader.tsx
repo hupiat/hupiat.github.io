@@ -1,11 +1,16 @@
 import { Button, Flex } from "antd";
-import React from "react";
-import { COLOR_DARK_PRIMARY } from "../utils/constants";
+import React, { Dispatch, SetStateAction } from "react";
 import Avatar from "../assets/avatar.png";
 import { GithubFilled, LinkedinFilled, MediumCircleFilled } from "@ant-design/icons";
 import { redirect } from "../utils/tools";
+import ColorPicker from "./ColorPicker";
+import { COLOR_DARK_PRIMARY, COLOR_DARK_PRIMARY_2, COLOR_DARK_PRIMARY_3, COLOR_DARK_PRIMARY_4, COLOR_DARK_PRIMARY_5 } from "../utils/constants";
 
-export default function NavHeader() {
+interface IProps {
+    setTheme: SetStateAction<Dispatch<string>>;
+}
+
+export default function NavHeader({ setTheme }: IProps) {
     
     return (
         <Flex style={{
@@ -13,19 +18,16 @@ export default function NavHeader() {
             flexDirection: "row",
             width: "100%",
             justifyContent: "space-between",
-            backgroundColor: COLOR_DARK_PRIMARY
         }}>
             <Flex style={{
                 flexDirection: "column",
                 color: "white",
-                backgroundColor: COLOR_DARK_PRIMARY
             }}>
                 <h1>Hugo Piat-Lillo</h1>
                 <span>26 y.o, <br /> France</span>
                 <h3>Professional Software Engineer <br /> (web & mobile)</h3>
                 <Flex style={{
                     flexDirection: "row",
-                    backgroundColor: COLOR_DARK_PRIMARY
                 }}>
                     <Button 
                         type="primary" 
@@ -48,14 +50,34 @@ export default function NavHeader() {
                 </Flex>
             </Flex>
 
-            <img src={Avatar} alt="avatar" style={{
-                width: "min(30vw, 300px)",
-                height: "min(30vw, 300px)",
+            <Flex style={{
+                flexDirection: "column",
                 // display for mobile devices
                 position: "relative",
                 top: "100px",
-                left: "-25px"
-            }} />
+                left: "-25px",
+                width: "min(25vw, 300px)",
+            }}>
+                <img src={Avatar} alt="avatar" style={{
+                    width: "min(25vw, 300px)",
+                    height: "min(25vw, 300px)",
+                }} />
+
+                <Flex style={{
+                    flexWrap: "wrap",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    position: "relative",
+                    width: "min(25vw, 300px)",
+                    top: "25px"
+                }}>
+                    <ColorPicker color={COLOR_DARK_PRIMARY} setTheme={setTheme} />
+                    <ColorPicker color={COLOR_DARK_PRIMARY_2} setTheme={setTheme} />
+                    <ColorPicker color={COLOR_DARK_PRIMARY_3} setTheme={setTheme} />
+                    <ColorPicker color={COLOR_DARK_PRIMARY_4} setTheme={setTheme} />
+                    <ColorPicker color={COLOR_DARK_PRIMARY_5} setTheme={setTheme} />
+                </Flex>
+            </Flex>
         </Flex>
     );
 }

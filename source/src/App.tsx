@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Flex, FloatButton, Layout } from 'antd';
 import { Content, Footer, Header } from 'antd/es/layout/layout';
 import { COLOR_BACKGROUND, COLOR_DARK_PRIMARY, COLOR_PRIMARY } from './utils/constants';
@@ -11,25 +11,28 @@ import LogoMinistere from "./assets/ministere_logo.png";
 import LogoEcoconseil from "./assets/ecoconseil_logo.png";
 import LogoSncf from "./assets/sncf_logo.png";
 import LogoSncfReseau from "./assets/sncf_reseau_logo.png";
-import LogoLacour from "./assets/groupe_lacour_logo.png";
 import AssetCard from './components/AssetCard';
 import NavHeader from './components/NavHeader';
 import NavFooter from './components/NavFooter';
 import NavFloatButton from './components/NavFloatButton';
-
+import { getStorageKey } from './utils/tools';
 
 function App() {
+  const storageTheme = localStorage.getItem(getStorageKey("theme"));
+
+  const [theme, setTheme] = useState<string>(storageTheme ?? COLOR_DARK_PRIMARY);
+
   return (
     <Layout style={{
       backgroundColor: COLOR_BACKGROUND
     }}>
       <Header style={{
-        backgroundColor: COLOR_DARK_PRIMARY,
+        backgroundColor: theme,
         borderBottom: "solid 5px " + COLOR_PRIMARY,
-        height: "550px", 
+        height: "600px", 
         display: "flex",
       }} >
-        <NavHeader />
+        <NavHeader setTheme={setTheme} />
       </Header>
       <Content style={{
         backgroundColor: COLOR_BACKGROUND,
@@ -73,13 +76,6 @@ function App() {
             webSiteUri="devcsi.fr"
             description="2 ans de CDI en assumant une fonction de Tech Lead. Reprise des travaux de R&D. Business intelligence pour SNCF Réseau. Suivi de relation client pour Ecoconseil énergies."
             />
-          {/* <AssetCard
-            image={LogoLacour}
-            imageStyle={{ marginLeft: "10px", marginTop: "10px" }}
-            altImage="logo Lacour Concept"
-            webSiteUri="groupe-lacour.fr"
-            description="Actuellement en poste de Développeur Full-Stack pour les professionnels de l'industrie automobile."
-            /> */}
         </Flex>
         <NavFloatButton />
         <FloatButton.BackTop type="primary" style={{
