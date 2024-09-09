@@ -32,7 +32,7 @@ export default function NavHeader({ setTheme, onSearch }: IProps) {
                 color: "white",
             }}>
                 <h1>Hugo Piat-Lillo</h1>
-                <span>26 y.o, <br /> France</span>
+                <span>27 y.o, <br /> France</span>
                 <h3>Professional Software Engineer <br /> (web & mobile)</h3>
                 <Flex style={{
                     flexDirection: "row",
