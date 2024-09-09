@@ -33,8 +33,7 @@ function App() {
       for (let i = 0; i < SEARCH_INDEXED_DESCRIPTIONS.length; i++) {
         const words = SEARCH_INDEXED_DESCRIPTIONS[i].split(" ");
         for (const word of words) {
-          // performs a weak equality with insensitive case and accents 
-          if (word.localeCompare(query, undefined, { sensitivity: 'base' }) === 0) {
+          if (!!query && word.toLocaleLowerCase().startsWith(query.toLocaleLowerCase())) {
             triggeredBySearch.add(i);
           }
         }

@@ -63,7 +63,7 @@ export default function NavHeader({ setTheme, onSearch }: IProps) {
                     value={query} 
                     onChange={e => setQuery(e.target.value)}
                     style={{
-                        marginTop: "50px"
+                        marginTop: "35px"
                     }} />
             </Flex>
 
