@@ -1,16 +1,24 @@
-import { Button, Flex } from "antd";
-import React, { Dispatch, SetStateAction } from "react";
+import { Button, Flex, Input } from "antd";
+import React, { Dispatch, SetStateAction, useDeferredValue, useEffect, useState } from "react";
 import Avatar from "../assets/avatar.png";
-import { GithubFilled, LinkedinFilled, MediumCircleFilled } from "@ant-design/icons";
+import { GithubFilled, LinkedinFilled, MediumCircleFilled, SearchOutlined } from "@ant-design/icons";
 import { redirect } from "../utils/tools";
 import ColorPicker from "./ColorPicker";
 import { COLOR_DARK_PRIMARY, COLOR_DARK_PRIMARY_2, COLOR_DARK_PRIMARY_3, COLOR_DARK_PRIMARY_4, COLOR_DARK_PRIMARY_5 } from "../utils/constants";
 
 interface IProps {
     setTheme: SetStateAction<Dispatch<string>>;
+    onSearch: (query: string) => void;
 }
 
-export default function NavHeader({ setTheme }: IProps) {
+export default function NavHeader({ setTheme, onSearch }: IProps) {
+    const [query, setQuery] = useState<string>("");
+
+    const deferredQuery = useDeferredValue(query);
+
+    useEffect(() => {
+        onSearch(deferredQuery);
+    }, [deferredQuery, onSearch]);
     
     return (
         <Flex style={{
@@ -48,6 +56,15 @@ export default function NavHeader({ setTheme }: IProps) {
                         icon={<MediumCircleFilled />} 
                         style={{ margin: "0px 20px" }} />
                 </Flex>
+                <Input 
+                    size="large" 
+                    placeholder="rechercher" 
+                    prefix={<SearchOutlined />} 
+                    value={query} 
+                    onChange={e => setQuery(e.target.value)}
+                    style={{
+                        marginTop: "50px"
+                    }} />
             </Flex>
 
             <Flex style={{

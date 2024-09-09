@@ -10,12 +10,13 @@ interface IProps {
     imageStyle?: CSSProperties;
     webSiteUri: string;
     description: string;
+    forceFlip?: boolean;
 }
 
-export default function AssetCard({ image, altImage, imageStyle, webSiteUri, description }: IProps) {
+export default function AssetCard({ image, altImage, imageStyle, webSiteUri, description, forceFlip }: IProps) {
     const [flipValue, setFlipValue] = useState<number>(0);
 
-    const isFlipped = () => flipValue === 180;
+    const isFlipped = () => flipValue === 180 || forceFlip;
 
     const handleDetailsClick = () => {
         setFlipValue(isFlipped() ? 0 : 180);
@@ -25,7 +26,7 @@ export default function AssetCard({ image, altImage, imageStyle, webSiteUri, des
     return (
         <motion.div 
             animate={{ 
-                transform: `rotateY(${flipValue}deg)`,
+                transform: `rotateY(${forceFlip ? 180 : flipValue}deg)`,
             }}
         >
             <Card 
