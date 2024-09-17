@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.487fac61.css",
-    "main.js": "/static/js/main.c750d5b2.js",
+    "main.js": "/static/js/main.02056ece.js",
     "static/js/453.01156e31.chunk.js": "/static/js/453.01156e31.chunk.js",
+    "static/media/scootio_logo.png": "/static/media/scootio_logo.5addfc3a9c469d94a27f.png",
     "static/media/avatar.png": "/static/media/avatar.e965a286e4717ccd6ec2.png",
     "static/media/uca_logo.png": "/static/media/uca_logo.a158377a90db01aef076.png",
     "static/media/ecoconseil_logo.png": "/static/media/ecoconseil_logo.56bcdc587e89bf726215.png",
@@ -13,11 +14,11 @@
     "static/media/devcsi_logo.png": "/static/media/devcsi_logo.1a08bc3ebf95952ad4c2.png",
     "index.html": "/index.html",
     "main.487fac61.css.map": "/static/css/main.487fac61.css.map",
-    "main.c750d5b2.js.map": "/static/js/main.c750d5b2.js.map",
+    "main.02056ece.js.map": "/static/js/main.02056ece.js.map",
     "453.01156e31.chunk.js.map": "/static/js/453.01156e31.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.487fac61.css",
-    "static/js/main.c750d5b2.js"
+    "static/js/main.02056ece.js"
   ]
 }
