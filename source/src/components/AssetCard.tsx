@@ -56,8 +56,8 @@ export default function AssetCard({
           cover: !isFlipped()
             ? {
                 display: "flex",
-                width: "min(210px, 50vw)",
-                height: "210px",
+                width: "min(220px, 50vw)",
+                height: "220px",
               }
             : {},
         }}
@@ -70,8 +70,8 @@ export default function AssetCard({
           <p
             style={{
               transform: "rotateY(180deg)",
-              width: "min(210px, 50vw)",
-              height: 210 - 77.5 + "px",
+              width: "min(220px, 50vw)",
+              height: 220 - 77.5 + "px",
             }}
           >
             {description}
