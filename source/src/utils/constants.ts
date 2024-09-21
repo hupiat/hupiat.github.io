@@ -32,4 +32,4 @@ export const DESC_DEVCSI_2 =
   "2 ans de CDI en assumant une fonction de Tech Lead. Reprise des travaux de R&D. Business intelligence pour SNCF Réseau. Suivi de relation client pour Ecoconseil énergies.";
 
 export const DESC_SCOOTIO =
-  "Scoot'io est une application mobile qui vous permet de visualiser le trafic, calculer le meilleur itinéraire, marquer les dangers comme le trafic dense ou les nids de poules et gérer vos trajets réguliers.";
+  "Scoot'io est une application mobile qui vous permet de visualiser le trafic, les stations de recharge, calculer le meilleur itinéraire, marquer les dangers comme le trafic dense ou les nids de poules et gérer vos trajets réguliers.";
