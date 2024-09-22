@@ -72,6 +72,8 @@ export default function AssetCard({
               transform: "rotateY(180deg)",
               width: "min(220px, 50vw)",
               height: 220 - 77.5 + "px",
+              position: "relative",
+              top: "-10px",
             }}
           >
             {description}
