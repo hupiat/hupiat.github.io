@@ -20,7 +20,7 @@ export const DESC_UCA =
   "Bachelor universitaire de technologie obtenu avec mention AB, en informatique et en développement d'applications intranet / internet, 2250 heures + 300 heures de projets tutorés.";
 
 export const DESC_CAILLOT =
-  "Stage universitaire de 4 mois. Développement d'une application mobile Android de gestion des process et d'une plateforme de mise à jour interne (Gitlab).";
+  "Stage universitaire de 4 mois. Développement d'une application mobile Android de gestion des process et d'une plateforme de mise à jour interne.";
 
 export const DESC_DEVCSI =
   "Alternance universitaire de 1 an, ainsi que 10 mois de CDI. Recherche et développement web en ingénierie logistique (norme S3000L). Application mobile Android de traçabilité RFID des trains.";
