@@ -167,7 +167,11 @@ function App() {
             LogoSncf,
           ]}
           imageAlts={[
-            "logo Ministère de L'écologie, logo SNCF Réseau, logo Ecoconseil Energies, logo Bolloré, logo SNCF",
+            "logo Ministère de L'écologie",
+            "logo SNCF Réseau",
+            "logo Ecoconseil Energies",
+            "logo Bolloré",
+            "logo SNCF",
           ]}
         />
       </Footer>
