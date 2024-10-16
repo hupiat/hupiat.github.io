@@ -33,3 +33,6 @@ export const DESC_DEVCSI_2 =
 
 export const DESC_SCOOTIO =
   "Scoot'io est une application mobile qui vous permet de visualiser le trafic, les stations de recharge, calculer le meilleur itinéraire, marquer les dangers comme le trafic dense ou les nids de poules et gérer vos trajets réguliers.";
+
+export const DESC_NELIXAIR =
+  "Actuellement en poste pour le développement de simulateurs d'aviation virtuels.";
