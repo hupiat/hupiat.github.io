@@ -24,6 +24,7 @@ import LogoMinistere from "./assets/ministere_logo.png";
 import LogoEcoconseil from "./assets/ecoconseil_logo.png";
 import LogoSncf from "./assets/sncf_logo.png";
 import LogoSncfReseau from "./assets/sncf_reseau_logo.png";
+import LogoLufthansaSystems from "./assets/lufthansa_systems_logo.png";
 import AssetCard from "./components/AssetCard";
 import NavHeader from "./components/NavHeader";
 import NavFooter from "./components/NavFooter";
@@ -171,6 +172,7 @@ function App() {
         <NavFooter
           imagePaths={[
             LogoMinistere,
+            LogoLufthansaSystems,
             LogoSncfReseau,
             LogoEcoconseil,
             LogoBollore,
@@ -178,6 +180,7 @@ function App() {
           ]}
           imageAlts={[
             "logo Ministère de L'écologie",
+            "logo Lufthansa Systems",
             "logo SNCF Réseau",
             "logo Ecoconseil Energies",
             "logo Bolloré",
