@@ -28,6 +28,9 @@ export const DESC_DEVCSI =
 export const DESC_POLYCONSEIL =
   "8 mois de CDI suite à une coupure sabbatique à Paris. Développement web full-stack. Déclarations des émissions polluantes pour le Ministère. Gestion des ressources humaines pour le groupe Bolloré.";
 
+export const DESC_MCVAIC =
+  "Participation à un programme intensif de deux jours de coaching pour accompagner les commerçants locaux dans leur transition digitale. ";
+
 export const DESC_DEVCSI_2 =
   "2 ans de CDI en assumant une fonction de Tech Lead. Développement web full-stack. Reprise des travaux de R&D. Business intelligence pour SNCF Réseau. Suivi de relation client pour Ecoconseil énergies.";
 

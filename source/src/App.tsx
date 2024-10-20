@@ -8,6 +8,7 @@ import {
   DESC_CAILLOT,
   DESC_DEVCSI,
   DESC_DEVCSI_2,
+  DESC_MCVAIC,
   DESC_NELIXAIR,
   DESC_POLYCONSEIL,
   DESC_SCOOTIO,
@@ -16,6 +17,7 @@ import {
 import LogoNelixair from "./assets/nelixair_logo.png";
 import LogoUca from "./assets/uca_logo.png";
 import LogoDevcsi from "./assets/devcsi_logo.png";
+import LogoMCVAIC from "./assets/MCVAIC_logo.png";
 import LogoScootio from "./assets/scootio_logo.png";
 import LogoPolyconseil from "./assets/polyconseil_logo.png";
 import LogoCaillot from "./assets/caillot_logo.png";
@@ -38,6 +40,7 @@ const SEARCH_INDEXED_DESCRIPTIONS = [
   DESC_CAILLOT,
   DESC_DEVCSI,
   DESC_POLYCONSEIL,
+  DESC_MCVAIC,
   DESC_DEVCSI_2,
   DESC_SCOOTIO,
   DESC_NELIXAIR,
@@ -132,25 +135,32 @@ function App() {
             forceFlip={triggeredBySearch.has(3)}
           />
           <AssetCard
+            image={LogoMCVAIC}
+            altImage="logo MCVAIC"
+            webSiteUri="facebook.com/incroyablecommerce/"
+            description={DESC_MCVAIC}
+            forceFlip={triggeredBySearch.has(4)}
+          />
+          <AssetCard
             image={LogoDevcsi}
             altImage="logo DevCSI"
             webSiteUri="devcsi.fr"
             description={DESC_DEVCSI_2}
-            forceFlip={triggeredBySearch.has(4)}
+            forceFlip={triggeredBySearch.has(5)}
           />
           <AssetCard
             image={LogoScootio}
             altImage="logo Scoot'io"
             webSiteUri="github.com/hupiat/Scoot-io"
             description={DESC_SCOOTIO}
-            forceFlip={triggeredBySearch.has(5)}
+            forceFlip={triggeredBySearch.has(6)}
           />
           <AssetCard
             image={LogoNelixair}
             altImage="logo NELIXAIR Association"
             webSiteUri="association.nelixair.com"
             description={DESC_NELIXAIR}
-            forceFlip={triggeredBySearch.has(6)}
+            forceFlip={triggeredBySearch.has(7)}
           />
         </Flex>
         <NavFloatButton />
