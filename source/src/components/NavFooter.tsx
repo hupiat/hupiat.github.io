@@ -24,7 +24,7 @@ export default function NavFooter({ imagePaths, imageAlts }: IProps) {
             src={img}
             alt={imageAlts[i]}
             style={{
-              width: "300px",
+              width: "250px",
               margin: "auto",
             }}
           />
