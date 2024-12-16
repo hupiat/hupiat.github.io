@@ -11,14 +11,14 @@ import {
   DESC_MCVAIC,
   DESC_NELIXAIR,
   DESC_POLYCONSEIL,
-  DESC_SCOOTIO,
+  DESC_OUTLIER,
   DESC_UCA,
 } from "./utils/constants";
 import LogoNelixair from "./assets/nelixair_logo.png";
 import LogoUca from "./assets/uca_logo.png";
 import LogoDevcsi from "./assets/devcsi_logo.png";
 import LogoMCVAIC from "./assets/MCVAIC_logo.png";
-import LogoScootio from "./assets/scootio_logo.png";
+import LogoOutlier from "./assets/outlier_logo.png";
 import LogoPolyconseil from "./assets/polyconseil_logo.png";
 import LogoCaillot from "./assets/caillot_logo.png";
 import LogoBollore from "./assets/bollore_logo.png";
@@ -42,8 +42,8 @@ const SEARCH_INDEXED_DESCRIPTIONS = [
   DESC_POLYCONSEIL,
   DESC_MCVAIC,
   DESC_DEVCSI_2,
-  DESC_SCOOTIO,
   DESC_NELIXAIR,
+  DESC_OUTLIER,
 ];
 
 function App() {
@@ -149,17 +149,17 @@ function App() {
             forceFlip={triggeredBySearch.has(5)}
           />
           <AssetCard
-            image={LogoScootio}
-            altImage="logo Scoot'io"
-            webSiteUri="github.com/hupiat/Scoot-io"
-            description={DESC_SCOOTIO}
-            forceFlip={triggeredBySearch.has(6)}
-          />
-          <AssetCard
             image={LogoNelixair}
             altImage="logo NELIXAIR Association"
             webSiteUri="association.nelixair.com"
             description={DESC_NELIXAIR}
+            forceFlip={triggeredBySearch.has(6)}
+          />
+          <AssetCard
+            image={LogoOutlier}
+            altImage="logo Outlier"
+            webSiteUri="outlier.ai"
+            description={DESC_OUTLIER}
             forceFlip={triggeredBySearch.has(7)}
           />
         </Flex>
