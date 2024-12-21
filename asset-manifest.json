@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.487fac61.css",
-    "main.js": "/static/js/main.07cd694b.js",
+    "main.js": "/static/js/main.02c10942.js",
     "static/js/453.01156e31.chunk.js": "/static/js/453.01156e31.chunk.js",
     "static/media/avatar.png": "/static/media/avatar.e965a286e4717ccd6ec2.png",
     "static/media/MCVAIC_logo.png": "/static/media/MCVAIC_logo.0ce37e1df3e8d8a35a70.png",
@@ -9,19 +9,19 @@
     "static/media/ecoconseil_logo.png": "/static/media/ecoconseil_logo.56bcdc587e89bf726215.png",
     "static/media/sncf_logo.png": "/static/media/sncf_logo.5965124ff6fae0e92ae2.png",
     "static/media/caillot_logo.png": "/static/media/caillot_logo.9ca3d3d8537216bc489f.png",
-    "static/media/outlier_logo.png": "/static/media/outlier_logo.02974dfa1036b2a611b6.png",
     "static/media/polyconseil_logo.png": "/static/media/polyconseil_logo.a644ada1b6df883c4623.png",
+    "static/media/alignerr_logo.png": "/static/media/alignerr_logo.9480d4e49883d3216ef8.png",
     "static/media/nelixair_logo.png": "/static/media/nelixair_logo.680a38fe46c033b87560.png",
     "static/media/bollore_logo.png": "/static/media/bollore_logo.5854545b1751aeca3d79.png",
     "static/media/lufthansa_systems_logo.png": "/static/media/lufthansa_systems_logo.023ca745490bae886771.png",
     "static/media/devcsi_logo.png": "/static/media/devcsi_logo.1a08bc3ebf95952ad4c2.png",
     "index.html": "/index.html",
     "main.487fac61.css.map": "/static/css/main.487fac61.css.map",
-    "main.07cd694b.js.map": "/static/js/main.07cd694b.js.map",
+    "main.02c10942.js.map": "/static/js/main.02c10942.js.map",
     "453.01156e31.chunk.js.map": "/static/js/453.01156e31.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.487fac61.css",
-    "static/js/main.07cd694b.js"
+    "static/js/main.02c10942.js"
   ]
 }

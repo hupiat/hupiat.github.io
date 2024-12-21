@@ -11,14 +11,14 @@ import {
   DESC_MCVAIC,
   DESC_NELIXAIR,
   DESC_POLYCONSEIL,
-  DESC_OUTLIER,
+  DESC_ALIGNERR,
   DESC_UCA,
 } from "./utils/constants";
 import LogoNelixair from "./assets/nelixair_logo.png";
 import LogoUca from "./assets/uca_logo.png";
 import LogoDevcsi from "./assets/devcsi_logo.png";
 import LogoMCVAIC from "./assets/MCVAIC_logo.png";
-import LogoOutlier from "./assets/outlier_logo.png";
+import LogoAlignerr from "./assets/alignerr_logo.png";
 import LogoPolyconseil from "./assets/polyconseil_logo.png";
 import LogoCaillot from "./assets/caillot_logo.png";
 import LogoBollore from "./assets/bollore_logo.png";
@@ -43,7 +43,7 @@ const SEARCH_INDEXED_DESCRIPTIONS = [
   DESC_MCVAIC,
   DESC_DEVCSI_2,
   DESC_NELIXAIR,
-  DESC_OUTLIER,
+  DESC_ALIGNERR,
 ];
 
 function App() {
@@ -156,10 +156,10 @@ function App() {
             forceFlip={triggeredBySearch.has(6)}
           />
           <AssetCard
-            image={LogoOutlier}
-            altImage="logo Outlier"
-            webSiteUri="outlier.ai"
-            description={DESC_OUTLIER}
+            image={LogoAlignerr}
+            altImage="logo Alignerr"
+            webSiteUri="alignerr.com"
+            description={DESC_ALIGNERR}
             forceFlip={triggeredBySearch.has(7)}
           />
         </Flex>

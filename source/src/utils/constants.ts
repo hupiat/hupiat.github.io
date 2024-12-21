@@ -37,5 +37,5 @@ export const DESC_DEVCSI_2 =
 export const DESC_NELIXAIR =
   "Actuellement en poste pour le développement de simulateurs d'aviation virtuelle.";
 
-export const DESC_OUTLIER =
+export const DESC_ALIGNERR =
   "Actuellement en contrat freelance pour l'entraînemement de modèles d'intelligence artificelle.";
