@@ -38,4 +38,4 @@ export const DESC_NELIXAIR =
   "Actuellement en poste pour le développement de simulateurs d'aviation virtuelle.";
 
 export const DESC_ALIGNERR =
-  "Actuellement en contrat freelance pour l'entraînemement de modèles d'intelligence artificelle.";
+  "Actuellement en contrat freelance pour l'entraînement de modèles d'intelligence artificelle.";
