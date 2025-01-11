@@ -35,7 +35,10 @@ export const DESC_DEVCSI_2 =
   "2 ans de CDI en assumant une fonction de Tech Lead. Développement web full-stack. Reprise des travaux de R&D. Business intelligence pour SNCF Réseau. Suivi de relation client pour Ecoconseil énergies.";
 
 export const DESC_NELIXAIR =
-  "Actuellement en poste pour le développement de simulateurs d'aviation virtuelle.";
+  "Actuellement en contrat bénévole pour le développement de simulateurs d'aviation virtuelle.";
+
+export const DESC_SUPER_ANNOTATE =
+  "4 mois de contrat freelance pour l'entraînement de modèles d'intelligence artificielle.";
 
 export const DESC_ALIGNERR =
-  "Actuellement en contrat freelance pour l'entraînement de modèles d'intelligence artificelle.";
+  "Actuellement en contrat freelance pour l'entraînement de modèles d'intelligence artificielle.";

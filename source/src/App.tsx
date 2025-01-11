@@ -13,8 +13,10 @@ import {
   DESC_POLYCONSEIL,
   DESC_ALIGNERR,
   DESC_UCA,
+  DESC_SUPER_ANNOTATE,
 } from "./utils/constants";
 import LogoNelixair from "./assets/nelixair_logo.png";
+import LogoSuperAnnotate from "./assets/super_annotate_logo.png";
 import LogoUca from "./assets/uca_logo.png";
 import LogoDevcsi from "./assets/devcsi_logo.png";
 import LogoMCVAIC from "./assets/MCVAIC_logo.png";
@@ -43,6 +45,7 @@ const SEARCH_INDEXED_DESCRIPTIONS = [
   DESC_MCVAIC,
   DESC_DEVCSI_2,
   DESC_NELIXAIR,
+  DESC_SUPER_ANNOTATE,
   DESC_ALIGNERR,
 ];
 
@@ -137,7 +140,7 @@ function App() {
           <AssetCard
             image={LogoMCVAIC}
             altImage="logo MCVAIC"
-            webSiteUri="facebook.com/incroyablecommerce/"
+            webSiteUri="moncommerce-centreville.com"
             description={DESC_MCVAIC}
             forceFlip={triggeredBySearch.has(4)}
           />
@@ -156,11 +159,21 @@ function App() {
             forceFlip={triggeredBySearch.has(6)}
           />
           <AssetCard
+            image={LogoSuperAnnotate}
+            altImage="logo SuperAnnotate"
+            imageStyle={{
+              margin: "10px",
+            }}
+            webSiteUri="superannotate.com"
+            description={DESC_SUPER_ANNOTATE}
+            forceFlip={triggeredBySearch.has(7)}
+          />
+          <AssetCard
             image={LogoAlignerr}
             altImage="logo Alignerr"
             webSiteUri="alignerr.com"
             description={DESC_ALIGNERR}
-            forceFlip={triggeredBySearch.has(7)}
+            forceFlip={triggeredBySearch.has(8)}
           />
         </Flex>
         <NavFloatButton />
