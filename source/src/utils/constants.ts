@@ -26,7 +26,7 @@ export const DESC_DEVCSI =
   "Alternance universitaire de 1 an, ainsi que 10 mois de CDI. Recherche et développement web en ingénierie logistique (norme S3000L). Application mobile Android de traçabilité RFID des trains.";
 
 export const DESC_POLYCONSEIL =
-  "8 mois de CDI suite à une coupure sabbatique à Paris. Développement web full-stack. Déclarations des émissions polluantes pour le Ministère. Gestion des ressources humaines pour le groupe Bolloré.";
+  "8 mois de CDI. Développement web full-stack. Déclarations des émissions polluantes pour le Ministère. Gestion des ressources humaines pour le groupe Bolloré.";
 
 export const DESC_MCVAIC =
   "Participation à un programme intensif de deux jours de coaching pour accompagner les commerçants locaux dans leur transition digitale. ";
