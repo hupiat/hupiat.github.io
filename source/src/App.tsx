@@ -11,18 +11,16 @@ import {
   DESC_MCVAIC,
   DESC_NELIXAIR,
   DESC_POLYCONSEIL,
-  DESC_ALIGNERR,
   DESC_UCA,
-  DESC_SUPER_ANNOTATE,
+  DESC_INSOLVO,
 } from "./utils/constants";
 import LogoNelixair from "./assets/nelixair_logo.png";
-import LogoSuperAnnotate from "./assets/super_annotate_logo.png";
 import LogoUca from "./assets/uca_logo.png";
 import LogoDevcsi from "./assets/devcsi_logo.png";
 import LogoMCVAIC from "./assets/MCVAIC_logo.png";
-import LogoAlignerr from "./assets/alignerr_logo.png";
 import LogoPolyconseil from "./assets/polyconseil_logo.png";
 import LogoCaillot from "./assets/caillot_logo.png";
+import LogoInsolvo from "./assets/insolvo_logo.png";
 import LogoBollore from "./assets/bollore_logo.png";
 import LogoMinistere from "./assets/ministere_logo.png";
 import LogoEcoconseil from "./assets/ecoconseil_logo.png";
@@ -45,8 +43,7 @@ const SEARCH_INDEXED_DESCRIPTIONS = [
   DESC_MCVAIC,
   DESC_DEVCSI_2,
   DESC_NELIXAIR,
-  DESC_SUPER_ANNOTATE,
-  DESC_ALIGNERR,
+  DESC_INSOLVO,
 ];
 
 function App() {
@@ -159,21 +156,11 @@ function App() {
             forceFlip={triggeredBySearch.has(6)}
           />
           <AssetCard
-            image={LogoSuperAnnotate}
-            altImage="logo SuperAnnotate"
-            imageStyle={{
-              margin: "10px",
-            }}
-            webSiteUri="superannotate.com"
-            description={DESC_SUPER_ANNOTATE}
+            image={LogoInsolvo}
+            altImage="logo Insolvo"
+            webSiteUri="insolvo.com"
+            description={DESC_INSOLVO}
             forceFlip={triggeredBySearch.has(7)}
-          />
-          <AssetCard
-            image={LogoAlignerr}
-            altImage="logo Alignerr"
-            webSiteUri="alignerr.com"
-            description={DESC_ALIGNERR}
-            forceFlip={triggeredBySearch.has(8)}
           />
         </Flex>
         <NavFloatButton />

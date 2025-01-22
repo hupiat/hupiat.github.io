@@ -37,8 +37,5 @@ export const DESC_DEVCSI_2 =
 export const DESC_NELIXAIR =
   "Actuellement en contrat bénévole pour le développement de simulateurs d'aviation virtuelle.";
 
-export const DESC_SUPER_ANNOTATE =
-  "4 mois de contrat freelance pour l'entraînement de modèles d'intelligence artificielle.";
-
-export const DESC_ALIGNERR =
-  "Actuellement en contrat freelance pour l'entraînement de modèles d'intelligence artificielle.";
+export const DESC_INSOLVO =
+  "Actuellement en contrat freelance pour divers clients.";
